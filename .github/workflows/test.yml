@@ -10,6 +10,10 @@ jobs:
              windows-latest, windows-11-arm,
              macos-13, macos-latest]
         python-version: ["3.10", "3.11", "3.12", "3.13"]
+        include:
+          - os: ubuntu-latest
+            python-version: "3.13"
+            run_lint: true
         exclude:
           - os: windows-11-arm
             python-version: "3.10"
@@ -32,9 +36,13 @@ jobs:
         python -m pip install --upgrade pip
         pip install tox
 
-    - name: Run tox
+    - name: Run lint
+      if: matrix.run_lint == true
+      run: tox -e format,type
+
+    - name: Run test
       shell: bash
       run: |
-        TOX_ENV=py3.12
+        TOX_ENV=py${{ matrix.python-version }}
         TOX_ENV=${TOX_ENV//./}
         tox -e $TOX_ENV
