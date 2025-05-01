@@ -23,15 +23,15 @@ def get_current_branch():
 
 @click.command()
 @click.option(
-    '-n',
+    '-b',
     default=lambda: get_current_branch(),
     show_default="current branch",
     help="The branch or tag name to push, default is current branch"
 )
-def push(n):
+def push(b):
     os.system(f"""/usr/bin/expect <<EOF
     set timeout 10
-    spawn git push -u origin {n}
+    spawn git push -u origin {b}
     expect "Username for"
     send "$GITHUB_USERNAME\r"
     expect "Password for"
