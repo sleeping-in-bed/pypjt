@@ -20,6 +20,8 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
+    - uses: actions/checkout@v4
+
     - name: Setup test Python environment
       uses: ./.github/actions/setup-test-env
       with:

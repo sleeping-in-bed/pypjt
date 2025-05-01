@@ -1,5 +1,5 @@
 name: Setup test env
-description: checkout, Python, Rust, pip
+description: Setup Python, Rust, pip
 inputs:
   python-version:
     description: Python version to set up
@@ -8,9 +8,6 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - uses: actions/checkout@v4
-      id: checkout
-
     - uses: actions/setup-python@v5
       id: setup-python
       with:
