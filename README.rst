@@ -1,9 +1,25 @@
 Pypjt - Python Project Template
 ===============================
 
+Pypjt is a project to create python project template.
+
 Docs: https://pypjt.readthedocs.io/en/latest/
 
-Pypjt is a project to create python project template.
+.. image:: https://img.shields.io/pypi/v/pypjt.svg
+   :target: https://pypi.org/project/pypjt/
+   :alt: PyPI version
+
+.. image:: https://static.pepy.tech/badge/pypjt
+   :target: https://pepy.tech/projects/pypjt
+   :alt: PyPI downloads
+
+.. image:: https://github.com/sleeping-in-bed/pypjt/actions/workflows/test.yml/badge.svg?branch=main
+   :target: https://github.com/sleeping-in-bed/pypjt/actions/workflows/test.yml
+   :alt: Test status
+
+.. image:: https://codecov.io/github/sleeping-in-bed/pypjt/branch/feat%2Fcodecov/graph/badge.svg?token=HEIMHMX0PK
+   :target: https://codecov.io/github/sleeping-in-bed/pypjt
+   :alt: Codecov
 
 Installation
 ------------
