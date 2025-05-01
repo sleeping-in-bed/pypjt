@@ -1,3 +1,9 @@
+## [1.1.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.0.1...v1.1.0) (2025-05-01)
+
+### Features
+
+* update Github ci, push_to_github script ([4891031](https://github.com/sleeping-in-bed/pypjt/commit/48910315a3b950775ddaeb5f81530a8c4b004416))
+
 ## [1.0.1](https://github.com/sleeping-in-bed/pypjt/compare/v1.0.0...v1.0.1) (2025-05-01)
 
 ### Reverts
