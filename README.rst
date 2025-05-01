@@ -17,7 +17,7 @@ Docs: https://pypjt.readthedocs.io/en/latest/
    :target: https://github.com/sleeping-in-bed/pypjt/actions/workflows/test.yml
    :alt: Test status
 
-.. image:: https://codecov.io/github/sleeping-in-bed/pypjt/branch/feat%2Fcodecov/graph/badge.svg?token=HEIMHMX0PK
+.. image:: https://codecov.io/github/sleeping-in-bed/pypjt/graph/badge.svg?token=HEIMHMX0PK
    :target: https://codecov.io/github/sleeping-in-bed/pypjt
    :alt: Codecov
 

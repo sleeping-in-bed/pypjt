@@ -15,6 +15,7 @@ dist/
 .coverage
 htmlcov/
 coverage.xml
+junit.xml
 # tox
 .tox/
 # sphinx
