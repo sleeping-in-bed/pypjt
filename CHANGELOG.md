@@ -1,3 +1,9 @@
+## [1.2.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.1.0...v1.2.0) (2025-05-01)
+
+### Features
+
+* add codecov ci and badges of README.rst ([183aa6e](https://github.com/sleeping-in-bed/pypjt/commit/183aa6ea0423ad0270258c7d4ce4f7016bc8d439))
+
 ## [1.1.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.0.1...v1.1.0) (2025-05-01)
 
 ### Features
