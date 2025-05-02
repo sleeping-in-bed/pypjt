@@ -7,7 +7,9 @@ from bs4 import BeautifulSoup
 
 
 @click.command()
-@click.option('--dir', 'htmlcov_dir', default='htmlcov', help='Coverage HTML output directory.')
+@click.option(
+    "--dir", "htmlcov_dir", default="htmlcov", help="Coverage HTML output directory."
+)
 def main(htmlcov_dir):
     """Generate an index.html that links to sub coverage reports."""
     links = []
@@ -19,10 +21,14 @@ def main(htmlcov_dir):
         path = os.path.join(htmlcov_dir, name)
         index_file = os.path.join(path, "index.html")
         if os.path.isdir(path) and os.path.exists(index_file):
-            soup = BeautifulSoup(Path(index_file).read_text(encoding='utf-8'), 'html.parser')
-            coverage_span = soup.find('span', class_='pc_cov')
-            content = (f'<li><a href="{name}/index.html">{name} Coverage Report</a><br/>'
-                       f'<p>Coverage report: {coverage_span.text}</p></li>')
+            soup = BeautifulSoup(
+                Path(index_file).read_text(encoding="utf-8"), "html.parser"
+            )
+            coverage_span = soup.find("span", class_="pc_cov")
+            content = (
+                f'<li><a href="{name}/index.html">{name} Coverage Report</a><br/>'
+                f"<p>Coverage report: {coverage_span.text}</p></li>"
+            )
             links.append(content)
 
     links_html = "\n".join(links)
@@ -41,4 +47,4 @@ def main(htmlcov_dir):
 </html>"""
 
     index_path = os.path.join(htmlcov_dir, "index.html")
-    Path(index_path).write_text(content, encoding='utf-8')
+    Path(index_path).write_text(content, encoding="utf-8")

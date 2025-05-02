@@ -5,9 +5,11 @@ twine
 coverage
 pytest
 tox
-mypy
 ruff
 pre-commit
+
+mypy
+types-setuptools
 
 jinja2
 python-dotenv

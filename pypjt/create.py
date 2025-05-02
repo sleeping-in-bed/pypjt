@@ -58,7 +58,6 @@ def process(**kwargs):
         {**kwargs, "pypjt_version": pypjt_version},
     )
     r.render("README.rst", project_dir / "README.rst", kwargs)
-    r.render("tox.ini", project_dir / "tox.ini", kwargs)
 
 
 @click.command()
