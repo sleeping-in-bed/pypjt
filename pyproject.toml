@@ -40,9 +40,9 @@ testpaths = [
 
 [tool.ruff]
 extend-exclude = [
-    "pypjt/resources",
     "tests/resources",
     "tests/tmp",
+    "containerdata"
 ]
 
 [tool.ruff.lint]
@@ -63,7 +63,7 @@ select = [
 
 [tool.mypy]
 exclude = [
-    "pypjt/resources",
     "tests/resources",
-    'tests/tmp',
+    "tests/tmp",
+    "containerdata"
 ]

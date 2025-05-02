@@ -12,10 +12,13 @@ load_dotenv()
 def get_current_branch():
     """Get the current git branch name."""
     try:
-        branch = subprocess.check_output(
-            ["git", "rev-parse", "--abbrev-ref", "HEAD"],
-            stderr=subprocess.DEVNULL
-        ).decode().strip()
+        branch = (
+            subprocess.check_output(
+                ["git", "rev-parse", "--abbrev-ref", "HEAD"], stderr=subprocess.DEVNULL
+            )
+            .decode()
+            .strip()
+        )
         return branch
     except subprocess.CalledProcessError:
         return "main"  # fallback
@@ -23,10 +26,10 @@ def get_current_branch():
 
 @click.command()
 @click.option(
-    '-b',
+    "-b",
     default=lambda: get_current_branch(),
     show_default="current branch",
-    help="The branch or tag name to push, default is current branch"
+    help="The branch or tag name to push, default is current branch",
 )
 def push(b):
     os.system(f"""/usr/bin/expect <<EOF
@@ -40,5 +43,5 @@ def push(b):
 EOF""")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     push()
