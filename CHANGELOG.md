@@ -1,3 +1,9 @@
+## [1.3.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.2.0...v1.3.0) (2025-05-02)
+
+### Features
+
+* format some code and update tox.ini ([1b72315](https://github.com/sleeping-in-bed/pypjt/commit/1b72315c05e0103eade3ac68f4e2c9e36287225b))
+
 ## [1.2.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.1.0...v1.2.0) (2025-05-01)
 
 ### Features
