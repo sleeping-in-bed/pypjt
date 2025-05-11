@@ -10,7 +10,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          persist-credentials: false
           fetch-depth: 0
 
       - name: Set up Python
@@ -31,11 +30,12 @@ jobs:
 
       - name: Auto-fix & Commit changes (on push only)
         if: github.event_name == 'push'
+        shell: bash
         run: |
-          if [[ `git status --porcelain` ]]; then
+          if [[ $(git status --porcelain) ]]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add .
-            git commit -m "chore: auto-fix pre-commit issues"
-            git push
+            git commit -m "chore: auto-fix pre-commit issues [skip ci]"
+            git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
           fi
