@@ -21,6 +21,26 @@
               }
             ],
             "countMatches": true
+          },
+          {
+            "files": ["uv.lock", "pypjt/resources/uv.lock"],
+            "from": "(\\[\\[package\\]\\](?:.|\\n)*?name\\s*=\\s*\\\"pypjt\\\"(?:.|\\n)*?version\\s*=\\s*)\\\".*?\\\"",
+            "to": "$1\"${nextRelease.version}\"",
+            "results": [
+              {
+                "file": "uv.lock",
+                "hasChanged": true,
+                "numMatches": 1,
+                "numReplacements": 1
+              },
+              {
+                "file": "pypjt/resources/uv.lock",
+                "hasChanged": true,
+                "numMatches": 1,
+                "numReplacements": 1
+              }
+            ],
+            "countMatches": true
           }
         ]
       }

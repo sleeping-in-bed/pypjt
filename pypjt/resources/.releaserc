@@ -21,6 +21,20 @@
               }
             ],
             "countMatches": true
+          },
+          {
+            "files": ["uv.lock"],
+            "from": "(\\[\\[package\\]\\](?:.|\\n)*?name\\s*=\\s*\\\"{{project_name}}\\\"(?:.|\\n)*?version\\s*=\\s*)\\\".*?\\\"",
+            "to": "$1\"${nextRelease.version}\"",
+            "results": [
+              {
+                "file": "uv.lock",
+                "hasChanged": true,
+                "numMatches": 1,
+                "numReplacements": 1
+              }
+            ],
+            "countMatches": true
           }
         ]
       }

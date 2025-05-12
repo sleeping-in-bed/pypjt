@@ -58,6 +58,7 @@ def process(**kwargs):
         {**kwargs, "pypjt_version": pypjt_version},
     )
     r.render("README.rst", project_dir / "README.rst", kwargs)
+    r.render(".releaserc", project_dir / ".releaserc", kwargs)
 
 
 @click.command()

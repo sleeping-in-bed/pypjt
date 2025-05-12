@@ -40,6 +40,7 @@ dev = [
     "sphinx",
     "sphinx-autobuild",
 
+    "jinja2",
     "python-dotenv",
     "rtoml",
     "beautifulsoup4",
