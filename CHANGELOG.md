@@ -1,3 +1,13 @@
+## [1.4.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.3.0...v1.4.0) (2025-05-12)
+
+### Features
+
+* add pre-commit.yml, separate lint.yml from test.yml, and remove the tox command in .pre-commit-config.yaml ([ce5972d](https://github.com/sleeping-in-bed/pypjt/commit/ce5972d6f3400159ccdb6346be2c7838a38a1cf4))
+
+### Bug Fixes
+
+* remove lint job in test.yml ([89926c6](https://github.com/sleeping-in-bed/pypjt/commit/89926c68b3b1a13deb4a84e63afb319dd1095e54))
+
 ## [1.3.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.2.0...v1.3.0) (2025-05-02)
 
 ### Features
