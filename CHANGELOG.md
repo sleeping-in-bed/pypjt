@@ -1,3 +1,9 @@
+## [1.5.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.4.0...v1.5.0) (2025-05-12)
+
+### Features
+
+* introduce uv ([2b6401f](https://github.com/sleeping-in-bed/pypjt/commit/2b6401fcc03c390b05e4d16c226c163323268388))
+
 ## [1.4.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.3.0...v1.4.0) (2025-05-12)
 
 ### Features
