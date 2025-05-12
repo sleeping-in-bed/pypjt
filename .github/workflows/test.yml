@@ -28,7 +28,7 @@ jobs:
       run: |
         TOX_ENV=py${{ matrix.python-version }}
         TOX_ENV=${TOX_ENV//./}
-        tox -e $TOX_ENV
+        tox --runner virtualenv -e $TOX_ENV
         coverage xml
 
     - name: Upload results to Codecov
