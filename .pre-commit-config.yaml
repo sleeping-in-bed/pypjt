@@ -24,3 +24,8 @@ repos:
       entry: tox
       language: system
       pass_filenames: false
+
+- repo: https://github.com/astral-sh/uv-pre-commit
+  rev: 0.7.3
+  hooks:
+    - id: uv-lock
