@@ -1,3 +1,9 @@
+## [1.5.2](https://github.com/sleeping-in-bed/pypjt/compare/v1.5.1...v1.5.2) (2025-05-12)
+
+### Bug Fixes
+
+* add .releaserc sync uv.lock version ([823d90d](https://github.com/sleeping-in-bed/pypjt/commit/823d90d511f93974fbbc8694043dd7c078ebcba9))
+
 ## [1.5.1](https://github.com/sleeping-in-bed/pypjt/compare/v1.5.0...v1.5.1) (2025-05-12)
 
 ### Bug Fixes
