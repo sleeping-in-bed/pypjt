@@ -1,3 +1,9 @@
+## [1.5.1](https://github.com/sleeping-in-bed/pypjt/compare/v1.5.0...v1.5.1) (2025-05-12)
+
+### Bug Fixes
+
+* fix lint.yml ([a827564](https://github.com/sleeping-in-bed/pypjt/commit/a82756402eb3cb931ff61a476fcb1a944b54985b))
+
 ## [1.5.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.4.0...v1.5.0) (2025-05-12)
 
 ### Features
