@@ -1,6 +1,7 @@
 /containerdata
 # py
 __pycache__/
+.venv/
 # node
 node_modules/
 # secret

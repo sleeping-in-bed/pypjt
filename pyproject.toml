@@ -4,7 +4,6 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "pypjt"
 version = "1.3.0"
-dynamic = ["dependencies", "optional-dependencies"]
 authors = [
     { name = "sleeping-in-bed", email = "nyanyanyaworld@gmail.com" },
 ]
@@ -20,12 +19,37 @@ classifiers = [
     "Programming Language :: Python :: 3.13",
     "Operating System :: OS Independent",
 ]
+dependencies = [
+    "build",
+    "twine",
+    "coverage",
+    "pytest",
+    "tox",
+    "mypy",
+    "ruff",
+    "pre-commit",
+    "sphinx",
+    "sphinx-autobuild",
+    "jinja2",
+    "python-dotenv",
+    "rtoml",
+    "beautifulsoup4",
+    "click",
+]
+
+[dependency-groups]
+dev = [
+    "types-setuptools"
+]
 
 [project.scripts]
 pypjt = "pypjt:main"
 
 [tool.pypjt]
 created-by = "0.1.0"
+
+[tool.uv]
+default-groups = "all"
 
 [tool.setuptools]
 packages = ["pypjt"]
