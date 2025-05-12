@@ -26,4 +26,4 @@ runs:
       run: |
         uv tool install tox --with tox-uv
         python -m pip install --upgrade pip
-        pip install tox pytest coverage
+        pip install pytest coverage
