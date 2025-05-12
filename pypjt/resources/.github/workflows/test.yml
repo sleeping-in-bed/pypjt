@@ -14,7 +14,7 @@ jobs:
           python-version: "3.13"
 
       - name: Run lint
-        run: tox -e format,type
+        run: tox --runner virtualenv -e format,type
 
   tox:
     strategy:
@@ -41,7 +41,7 @@ jobs:
       run: |
         TOX_ENV=py${{ matrix.python-version }}
         TOX_ENV=${TOX_ENV//./}
-        tox -e $TOX_ENV
+        tox --runner virtualenv -e $TOX_ENV
         coverage xml
 
     - name: Upload results to Codecov

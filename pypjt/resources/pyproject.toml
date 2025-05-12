@@ -21,10 +21,38 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "build",
+    "twine",
+
+    "coverage",
+    "pytest",
+    "tox",
+    "mypy",
+    "ruff",
+    "pre-commit",
+
+    "types-setuptools",
+
+    "sphinx",
+    "sphinx-autobuild",
+
+    "python-dotenv",
+    "rtoml",
+    "beautifulsoup4",
+    "click",
+]
+
 [project.scripts]
 
 [tool.pypjt]
 created-by = "{{pypjt_version}}"
+
+[tool.uv]
+default-groups = "all"
 
 [tool.setuptools]
 packages = ["{{project_name}}"]

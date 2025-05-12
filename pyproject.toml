@@ -22,14 +22,17 @@ classifiers = [
 dependencies = [
     "build",
     "twine",
+
     "coverage",
     "pytest",
     "tox",
     "mypy",
     "ruff",
     "pre-commit",
+
     "sphinx",
     "sphinx-autobuild",
+
     "jinja2",
     "python-dotenv",
     "rtoml",
