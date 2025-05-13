@@ -1,3 +1,9 @@
+## [1.5.4](https://github.com/sleeping-in-bed/pypjt/compare/v1.5.3...v1.5.4) (2025-05-13)
+
+### Bug Fixes
+
+* fix "commit" action, format update_version.py ([6bc1d30](https://github.com/sleeping-in-bed/pypjt/commit/6bc1d30c26dce35521bf066494dec4cd10431652))
+
 ## [1.5.3](https://github.com/sleeping-in-bed/pypjt/compare/v1.5.2...v1.5.3) (2025-05-13)
 
 ### Bug Fixes
