@@ -1,3 +1,9 @@
+## [1.5.3](https://github.com/sleeping-in-bed/pypjt/compare/v1.5.2...v1.5.3) (2025-05-13)
+
+### Bug Fixes
+
+* test semantic-release ([f623daa](https://github.com/sleeping-in-bed/pypjt/commit/f623daa24bc37da9df91a518ececdc47db7521ed))
+
 ## [1.5.2](https://github.com/sleeping-in-bed/pypjt/compare/v1.5.1...v1.5.2) (2025-05-12)
 
 ### Bug Fixes
