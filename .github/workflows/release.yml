@@ -36,6 +36,7 @@ jobs:
           cat semantic-release.log
 
           VERSION=$(grep -oP '\bPublished release \K[0-9]+\.[0-9]+\.[0-9]+' semantic-release.log || echo "")
+          rm -f semantic-release.log
 
           if [[ -n "$VERSION" ]]; then
             echo "Found new version: $VERSION"
