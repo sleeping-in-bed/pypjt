@@ -754,7 +754,7 @@ wheels = [
 
 [[package]]
 name = "pypjt"
-version = "1.5.4"
+version = "1.6.0"
 source = { editable = "." }
 dependencies = [
     { name = "beautifulsoup4" },
