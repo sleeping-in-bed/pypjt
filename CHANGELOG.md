@@ -1,3 +1,9 @@
+## [1.6.1](https://github.com/sleeping-in-bed/pypjt/compare/v1.6.0...v1.6.1) (2025-05-13)
+
+### Bug Fixes
+
+* remove semantic-release.log ([8ed050a](https://github.com/sleeping-in-bed/pypjt/commit/8ed050ae1e007dcc61394b5841b5796f9444ccdb))
+
 ## [1.6.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.5.4...v1.6.0) (2025-05-13)
 
 ### Features
