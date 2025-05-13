@@ -1,3 +1,9 @@
+## [1.6.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.5.4...v1.6.0) (2025-05-13)
+
+### Features
+
+* sync to project ([6231103](https://github.com/sleeping-in-bed/pypjt/commit/6231103932212557a04c508a7b056b57b74fa70f))
+
 ## [1.5.4](https://github.com/sleeping-in-bed/pypjt/compare/v1.5.3...v1.5.4) (2025-05-13)
 
 ### Bug Fixes
