@@ -25,7 +25,6 @@ jobs:
           npm install -g semantic-release \
             @semantic-release/git \
             @semantic-release/changelog \
-            semantic-release-replace-plugin \
             conventional-changelog-conventionalcommits \
 
       - name: Run semantic-release and capture output

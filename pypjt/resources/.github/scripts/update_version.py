@@ -9,14 +9,6 @@ if not version:
 
 files_to_update = [
     {
-        "file": "pypjt/resources/uv.lock",
-        "pattern": re.compile(
-            r'(?P<block>\[\[package\]\][^\[]*?name\s*=\s*["\']pypjt["\'][^\[]*?version\s*=\s*["\'])(?P<version>\d+\.\d+\.\d+)(["\'])',
-            re.DOTALL,
-        ),
-        "replacement": lambda m: f"{m.group('block')}{version}{m.group(3)}",
-    },
-    {
         "file": "uv.lock",
         "pattern": re.compile(
             r'(?P<block>\[\[package\]\][^\[]*?name\s*=\s*["\']pypjt["\'][^\[]*?version\s*=\s*["\'])(?P<version>\d+\.\d+\.\d+)(["\'])',

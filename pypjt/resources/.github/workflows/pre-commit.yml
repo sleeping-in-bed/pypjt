@@ -28,26 +28,8 @@ jobs:
           pre-commit install
           pre-commit run --all-files || echo "::warning::Pre-commit hook(s) failed."
 
-      - name: Auto-fix & Commit changes
-        if: github.event_name == 'push'
-        shell: bash
-        run: |
-          if [[ -n "$(git status --porcelain)" ]]; then
-            echo "Changes detected after pre-commit run."
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-            git add .
-
-            git reset HEAD .github/workflows/
-
-            if git diff --staged --quiet; then
-              echo "No non-workflow changes to commit after auto-fix."
-            else
-              echo "Committing auto-fixed (non-workflow) changes..."
-              git commit -m "chore: auto-fix pre-commit issues [skip ci]"
-              git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
-            fi
-          else
-            echo "No changes made by pre-commit."
-          fi
+      - name: Commit
+        uses: ./.github/actions/commit
+        with:
+            message: 'chore: auto-fix pre-commit issues [skip ci]'
+            token: ${{ secrets.GITHUB_TOKEN }}
