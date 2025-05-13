@@ -64,3 +64,4 @@ jobs:
         uses: ./.github/actions/commit
         with:
             message: 'chore: update the version of the file(s) [skip ci]'
+            token: ${{ secrets.GITHUB_TOKEN }}

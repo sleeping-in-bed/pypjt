@@ -3,7 +3,10 @@ description: Commit and push changes
 
 inputs:
   message:
-    description: 'The commit message to use'
+    description: The commit message to use
+    required: true
+  token:
+    description: GitHub token
     required: true
 
 runs:
@@ -22,7 +25,7 @@ runs:
             echo "No changes to commit after excluding workflow files."
           else
             git commit -m "${{ inputs.message }}"
-            git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+            git push "https://${{ github.actor }}:${{ inputs.token }}@github.com/${{ github.repository }}.git"
           fi
         else
           echo "No changes made."

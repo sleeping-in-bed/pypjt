@@ -32,3 +32,4 @@ jobs:
         uses: ./.github/actions/commit
         with:
             message: 'chore: auto-fix pre-commit issues [skip ci]'
+            token: ${{ secrets.GITHUB_TOKEN }}
