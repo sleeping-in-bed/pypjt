@@ -9,7 +9,7 @@ authors = [
     { name = "{{author}}", email = "{{email}}" },
 ]
 description = "{{description}}"
-readme = "README.md"
+readme = "README.rst"
 requires-python = ">=3.10"
 classifiers = [
     "Programming Language :: Python",
