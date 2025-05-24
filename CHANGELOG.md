@@ -1,3 +1,9 @@
+## [1.10.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.9.0...v1.10.0) (2025-05-24)
+
+### Features
+
+* add automatically update document version string ([2e27511](https://github.com/sleeping-in-bed/pypjt/commit/2e27511b9ac05a35f70fca97fcade3ea0c943180))
+
 ## [1.9.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.8.0...v1.9.0) (2025-05-24)
 
 ### Features
