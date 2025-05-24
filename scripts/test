@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 cd ..
 source .env
-clear && tox
+clear && uvx tox

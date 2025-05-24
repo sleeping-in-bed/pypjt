@@ -158,6 +158,33 @@ You can run the following command to enable live documentation building and prev
 
    make livehtml
 
+You can run the ``make_po`` script to generate translation template files (``.po`` files) for your documentation.
+
+For more information on Sphinx internationalization (i18n),
+refer to the `official Sphinx guide <https://www.sphinx-doc.org/en/master/usage/advanced/intl.html>`_.
+
+.. code-block:: bash
+
+   cd scripts/docs
+   ./make_po  # Optional: specify languages with -l, e.g., -l zh_CN -l es
+
 This project also supports documentation hosting via
 `Read the Docs <https://about.readthedocs.com/>`_.
 You can sign in and configure it to enable automatic documentation hosting and updates.
+
+Codecov
+-------
+
+This project supports `Codecov <https://about.codecov.io/>`_, a popular code coverage reporting tool.
+
+After running your test suite and generating coverage reports, the coverage data can be uploaded to Codecov as part of the CI/CD pipeline.
+
+To enable Codecov integration:
+
+1. Sign in to Codecov with your GitHub/GitLab account.
+2. Add this repository to your Codecov dashboard.
+3. Generate a Codecov token (optional for public repos).
+4. In your CI environment (e.g., GitHub Actions), upload the coverage report using the official Codecov uploader.
+5. Add a badge to your README to display the current coverage status.
+
+The CI workflow is pre-configured to handle this integration automatically if the coverage report is generated and uploaded correctly.

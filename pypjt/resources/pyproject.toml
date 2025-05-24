@@ -39,6 +39,7 @@ dev = [
 
     "sphinx",
     "sphinx-autobuild",
+    "sphinx-intl",
 
     "jinja2",
     "python-dotenv",
