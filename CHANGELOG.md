@@ -1,3 +1,9 @@
+## [1.9.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.8.0...v1.9.0) (2025-05-24)
+
+### Features
+
+* add docs script and doc content ([3e85497](https://github.com/sleeping-in-bed/pypjt/commit/3e854977838351b88f06f05774402924642c83b2))
+
 ## [1.8.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.7.0...v1.8.0) (2025-05-24)
 
 ### Features
