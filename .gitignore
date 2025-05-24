@@ -1,4 +1,4 @@
-/containerdata
+/containerdata/
 # py
 __pycache__/
 .venv/
@@ -7,9 +7,10 @@ node_modules/
 # secret
 .env
 # tmp dir
-/tmp
-/tests/tmp
+/tmp/
+/tests/tmp/
 # build
+build/
 dist/
 *.egg-info/
 # coverage

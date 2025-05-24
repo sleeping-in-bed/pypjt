@@ -1,12 +1,12 @@
 Usage
 =====
 
-Now that we have created the project template, how do we use it?
+Now that the project template has been created, how do we use it?
 
-Git
----
+Configure Environment Variables
+-------------------------------
 
-The first step is to configure some environment variables in the ``.env`` file:
+The first step is to configure the environment variables in the ``.env`` file:
 
 - **GIT_NAME**: Your Git username, used for Git configuration.
 - **GIT_EMAIL**: Your Git email address, used for Git configuration.
@@ -14,23 +14,42 @@ The first step is to configure some environment variables in the ``.env`` file:
 - **GITHUB_USERNAME**: Your GitHub username, used for authentication.
 - **GITHUB_TOKEN**: Your GitHub personal access token, used to push to GitHub.
 
-After configuring these variables, run the ``git_init`` script located in the ``scripts`` directory:
+Install Dependencies
+--------------------
+
+After configuring these variables, run the ``install_dep`` script in the ``scripts`` directory:
+
+.. code-block:: bash
+
+   cd scripts
+   ./install_dep
+
+.. note::
+
+   Make sure to run the script **from within the scripts directory**,
+   not from the project root or any other directory.
+
+This will install all dependencies required by the project, including the ``uv`` package manager,
+Python packages (via pip), and JavaScript packages (via npm).
+
+Initialize Git
+--------------
+
+Next, run the ``git_init`` script:
 
 .. code-block:: bash
 
    cd scripts
    ./git_init
 
-.. note::
-
-   Make sure to run the script **from the scripts directory**,
-   not from the project root or any other directory.
-
 This script initializes a Git repository, sets the remote origin,
-and installs Husky hooks.
+and installs Husky hooks. These hooks will perform two checks:
+
+- A **pre-commit** check, as defined in ``.pre-commit-config.yaml``
+- A **commit message lint** check, as defined in ``commitlint.config.mjs``
 
 Before pushing to the GitHub remote repository for the first time,
-you need to change the GitHub workflow permissions:
+you must update the GitHub Actions workflow permissions:
 
 1. Go to your GitHub repository.
 2. Navigate to:
@@ -39,28 +58,29 @@ you need to change the GitHub workflow permissions:
 
       Settings -> Actions -> General -> Workflow permissions
 
-3. Select **"Read and write permissions"**.
-4. Click **"Save"**.
+3. Select **"Read and write permissions"**
+4. Click **"Save"**
 
 Once this is done, you can commit and push to the remote repository as usual.
+Because the GitHub credentials are set in the ``.env`` file, you can use the ``push_to_github`` script
+to push your repository to GitHub automatically.
 
 Semantic Release
 ----------------
 
 This project uses `semantic-release <https://github.com/semantic-release/semantic-release>`_
-by default to automate version management and
-changelog generation based on conventional commit messages.
+by default to automate versioning and changelog generation based on conventional commit messages.
 
 Features of ``semantic-release`` include:
 
 - Automatic versioning based on commit history
 - Automatic changelog generation
-- GitHub releases publishing
-- No need to manually bump versions
+- Publishing GitHub releases
+- No need to manually bump version numbers
 
 To trigger a release, simply merge a commit into the ``main`` branch that follows the
 `Conventional Commits <https://www.conventionalcommits.org/en/v1.0.0/>`_ format.
-``semantic-release`` will handle the rest in CI.
+``semantic-release`` will handle the rest via CI.
 
 For configuration details, see the
 `semantic-release documentation <https://semantic-release.gitbook.io/semantic-release/>`_.
@@ -68,9 +88,11 @@ For configuration details, see the
 Publishing to PyPI
 ------------------
 
-This project also supports automated publishing to `PyPI <https://pypi.org>`_.
+You can configure ``PYPI_U`` and ``PYPI_P`` in the ``.env`` file,
+then run the ``build_and_upload_to_pypi`` script to upload the package to PyPI.
+However, this manual method is **not recommended**.
 
-To enable this functionality, follow these steps:
+Instead, the recommended approach is to use automated publishing via CI:
 
 1. **Set author information in ``pyproject.toml``**
 
@@ -80,7 +102,7 @@ To enable this functionality, follow these steps:
 
       [project]
       name = "your-package-name"
-      version = "0.0.0"  # This field will be managed by semantic-release
+      version = "0.0.0"  # This field is managed by semantic-release
       description = "Your package description"
       authors = [
           { name = "Your Name", email = "your@email.com" }
@@ -89,12 +111,12 @@ To enable this functionality, follow these steps:
 
    .. note::
 
-      You do **not** need to manually change the ``version`` field.
-      It's managed automatically by ``semantic-release``.
+      You do **not** need to manually update the ``version`` field.
+      It is managed automatically by ``semantic-release``.
 
    .. warning::
 
-      If the ``authors`` field is missing or incomplete (either name or email),
+      If the ``authors`` field is missing or incomplete (missing name or email),
       the PyPI publishing step will **fail during CI**.
 
 2. **Configure the PyPI token**
@@ -103,11 +125,10 @@ To enable this functionality, follow these steps:
 
    .. code-block::
 
-      Settings -> Secrets and variables -> Actions ->
-      New repository secret
+      Settings -> Secrets and variables -> Actions -> New repository secret
 
-   Create a new secret named **PYPI_P** and paste your PyPI API token as its value.
-   You can generate this token in your PyPI account under:
+   Create a new secret named **PYPI_P** and paste your PyPI API token as the value.
+   You can generate the token from your PyPI account under:
 
    .. code-block::
 
@@ -117,11 +138,26 @@ To enable this functionality, follow these steps:
 
    Once the above steps are complete:
 
-   - Make a commit that follows the Conventional Commits convention.
+   - Make a commit that follows the Conventional Commits format.
    - Push or merge it into the ``main`` branch.
 
    This will trigger the GitHub Actions workflow, which will:
 
-   - Let ``semantic-release`` determine the next version.
-   - Automatically update the changelog and create a Git tag.
-   - Publish the package to PyPI.
+   - Let ``semantic-release`` determine the next version
+   - Automatically update the changelog and create a Git tag
+   - Publish the package to PyPI
+
+Write the Documentation
+-----------------------
+
+This project uses ``Sphinx`` as the documentation generator.
+
+You can run the following command to enable live documentation building and preview while editing:
+
+.. code-block:: bash
+
+   make livehtml
+
+This project also supports documentation hosting via
+`Read the Docs <https://about.readthedocs.com/>`_.
+You can sign in and configure it to enable automatic documentation hosting and updates.
