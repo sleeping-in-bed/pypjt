@@ -1,3 +1,9 @@
+## [1.8.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.7.0...v1.8.0) (2025-05-24)
+
+### Features
+
+* add Chinese translation of the document ([f8bae3d](https://github.com/sleeping-in-bed/pypjt/commit/f8bae3d75bb00345e5ef80b805d49c64d6d75dfd))
+
 ## [1.7.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.6.2...v1.7.0) (2025-05-24)
 
 ### Features
