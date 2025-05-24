@@ -1,3 +1,9 @@
+## [1.7.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.6.2...v1.7.0) (2025-05-24)
+
+### Features
+
+* update the doc and .readthedocs.yaml ([36ea426](https://github.com/sleeping-in-bed/pypjt/commit/36ea4261c69e1148df7dc03297aa479d821d94d9))
+
 ## [1.6.2](https://github.com/sleeping-in-bed/pypjt/compare/v1.6.1...v1.6.2) (2025-05-14)
 
 ### Bug Fixes
