@@ -1,0 +1,76 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, the pypjt developers
+# This file is distributed under the same license as the pypjt package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pypjt 0...1.1...0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-24 15:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/index.rst:52
+msgid "Contents:"
+msgstr "内容："
+
+#: ../../source/index.rst:7
+msgid "Pypjt - Python Project Template"
+msgstr "Pypjt - Python 项目模板"
+
+#: ../../source/index.rst:10
+msgid "Installation"
+msgstr "安装"
+
+#: ../../source/index.rst:12
+msgid "To install **pypjt**, use pip:"
+msgstr "要安装 **pypjt**，请使用 pip："
+
+#: ../../source/index.rst:19
+msgid "Quickstart"
+msgstr "快速开始"
+
+#: ../../source/index.rst:21
+msgid "To get started, simply run:"
+msgstr "要开始使用，只需运行："
+
+#: ../../source/index.rst:27
+msgid "If running it as a script doesn't work, you can run it as a module instead:"
+msgstr "如果作为脚本运行失败，你也可以作为模块运行："
+
+#: ../../source/index.rst:33
+msgid "It's safe to run—**it will not overwrite any existing directories**."
+msgstr "运行它是安全的——**它不会覆盖任何现有目录**。"
+
+#: ../../source/index.rst:35
+msgid "Once launched, you’ll be prompted to answer a few questions about the project you want to create."
+msgstr "启动后，你将被提示回答一些有关要创建的项目的问题。"
+
+#: ../../source/index.rst:37
+msgid "The **project name** is the most important and required field. You can leave the other fields empty or accept their default values. All of these settings can be changed later in ``pyproject.toml`` or other configuration files."
+msgstr "**项目名称** 是最重要也是必填的字段。你可以留空其他字段或接受默认值。所有这些设置都可以稍后在 ``pyproject.toml`` 或其他配置文件中更改。"
+
+#: ../../source/index.rst:41
+msgid "After you’ve completed the prompts, your project will be generated and saved under the current working directory."
+msgstr "在你完成提示后，项目将会被生成并保存在当前工作目录下。"
+
+#: ../../source/index.rst:44
+msgid "Great! You can now start coding within the newly created folder, or further customize the structure to fit your needs."
+msgstr "太好了！你现在可以在新创建的文件夹中开始编码，或根据需要进一步自定义结构。"
+
+#: ../../source/index.rst:48
+msgid "Next Step"
+msgstr "下一步"
+
+#: ../../source/index.rst:50
+msgid "Check out the :doc:`usage` section for more detailed instructions on how to work with your project."
+msgstr "请查看 :doc:`usage` 部分，获取有关如何使用项目的更详细说明。"

@@ -22,6 +22,7 @@ junit.xml
 .tox/
 # sphinx
 docs/build/
+docs/**/*.mo
 # JetBrains
 .idea/
 # vscode

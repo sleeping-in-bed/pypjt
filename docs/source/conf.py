@@ -38,3 +38,6 @@ language = "en"
 
 html_theme = "alabaster"
 html_static_path = ["_static"]
+
+locale_dirs = ['locale/']
+gettext_compact = False

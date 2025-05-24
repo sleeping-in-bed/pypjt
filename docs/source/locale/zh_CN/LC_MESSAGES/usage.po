@@ -1,0 +1,240 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, the pypjt developers
+# This file is distributed under the same license as the pypjt package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pypjt 0...1.1...0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-24 15:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/usage.rst:2
+msgid "Usage"
+msgstr "用法"
+
+#: ../../source/usage.rst:4
+msgid "Now that the project template has been created, how do we use it?"
+msgstr "现在项目模板已经创建完成，我们该如何使用它？"
+
+#: ../../source/usage.rst:7
+msgid "Configure Environment Variables"
+msgstr "配置环境变量"
+
+#: ../../source/usage.rst:9
+msgid "The first step is to configure the environment variables in the ``.env`` file:"
+msgstr "第一步是在 ``.env`` 文件中配置环境变量："
+
+#: ../../source/usage.rst:11
+msgid "**GIT_NAME**: Your Git username, used for Git configuration."
+msgstr "**GIT_NAME**：你的 Git 用户名，用于 Git 配置。"
+
+#: ../../source/usage.rst:12
+msgid "**GIT_EMAIL**: Your Git email address, used for Git configuration."
+msgstr "**GIT_EMAIL**：你的 Git 邮箱地址，用于 Git 配置。"
+
+#: ../../source/usage.rst:13
+msgid "**REMOTE_REPO**: The remote repository URL for this project."
+msgstr "**REMOTE_REPO**：本项目的远程仓库地址。"
+
+#: ../../source/usage.rst:14
+msgid "**GITHUB_USERNAME**: Your GitHub username, used for authentication."
+msgstr "**GITHUB_USERNAME**：你的 GitHub 用户名，用于身份验证。"
+
+#: ../../source/usage.rst:15
+msgid "**GITHUB_TOKEN**: Your GitHub personal access token, used to push to GitHub."
+msgstr "**GITHUB_TOKEN**：你的 GitHub 个人访问令牌，用于推送代码到 GitHub。"
+
+#: ../../source/usage.rst:18
+msgid "Install Dependencies"
+msgstr "安装依赖"
+
+#: ../../source/usage.rst:20
+msgid "After configuring these variables, run the ``install_dep`` script in the ``scripts`` directory:"
+msgstr "配置完这些变量后，在 ``scripts`` 目录下运行 ``install_dep`` 脚本："
+
+#: ../../source/usage.rst:29
+msgid "Make sure to run the script **from within the scripts directory**, not from the project root or any other directory."
+msgstr "请确保 **从 scripts 目录中运行该脚本**，而不是从项目根目录或其他目录。"
+
+#: ../../source/usage.rst:32
+msgid "This will install all dependencies required by the project, including the ``uv`` package manager, Python packages (via pip), and JavaScript packages (via npm)."
+msgstr "这将安装项目所需的所有依赖项，包括 ``uv`` 包管理器、Python 包（通过 pip）以及 JavaScript 包（通过 npm）。"
+
+#: ../../source/usage.rst:36
+msgid "Initialize Git"
+msgstr "初始化 Git"
+
+#: ../../source/usage.rst:38
+msgid "Next, run the ``git_init`` script:"
+msgstr "接下来，运行 ``git_init`` 脚本："
+
+#: ../../source/usage.rst:45
+msgid "This script initializes a Git repository, sets the remote origin, and installs Husky hooks. These hooks will perform two checks:"
+msgstr "该脚本会初始化 Git 仓库、设置远程地址并安装 Husky 钩子。钩子将执行两个检查："
+
+#: ../../source/usage.rst:48
+msgid "A **pre-commit** check, as defined in ``.pre-commit-config.yaml``"
+msgstr "一个 **pre-commit** （提交前）检查，定义在 ``.pre-commit-config.yaml`` 中"
+
+#: ../../source/usage.rst:49
+msgid "A **commit message lint** check, as defined in ``commitlint.config.mjs``"
+msgstr "**提交信息规范** 检查，定义在 ``commitlint.config.mjs`` 中"
+
+#: ../../source/usage.rst:51
+msgid "Before pushing to the GitHub remote repository for the first time, you must update the GitHub Actions workflow permissions:"
+msgstr "首次推送到 GitHub 仓库之前，你必须更新 GitHub Actions 工作流的权限："
+
+#: ../../source/usage.rst:54
+msgid "Go to your GitHub repository."
+msgstr "进入你的 GitHub 仓库。"
+
+#: ../../source/usage.rst:55
+msgid "Navigate to:"
+msgstr "导航至："
+
+#: ../../source/usage.rst:61
+msgid "Select **\"Read and write permissions\"**"
+msgstr "选择 **“读取和写入权限”**"
+
+#: ../../source/usage.rst:62
+msgid "Click **\"Save\"**"
+msgstr "点击 **“保存”**"
+
+#: ../../source/usage.rst:64
+msgid "Once this is done, you can commit and push to the remote repository as usual. Because the GitHub credentials are set in the ``.env`` file, you can use the ``push_to_github`` script to push your repository to GitHub automatically."
+msgstr "完成上述操作后，你就可以像往常一样提交并推送到远程仓库。由于 GitHub 凭证已配置在 ``.env`` 文件中，你可以使用 ``push_to_github`` 脚本自动将仓库推送到 GitHub。"
+
+#: ../../source/usage.rst:69
+msgid "Semantic Release"
+msgstr "语义化发布（Semantic Release）"
+
+#: ../../source/usage.rst:71
+msgid "This project uses `semantic-release <https://github.com/semantic-release/semantic-release>`_ by default to automate versioning and changelog generation based on conventional commit messages."
+msgstr "本项目默认使用 `semantic-release <https://github.com/semantic-release/semantic-release>`_，根据规范化的提交信息自动管理版本和生成变更日志。"
+
+#: ../../source/usage.rst:74
+msgid "Features of ``semantic-release`` include:"
+msgstr "``semantic-release`` 的功能包括："
+
+#: ../../source/usage.rst:76
+msgid "Automatic versioning based on commit history"
+msgstr "根据提交历史自动管理版本"
+
+#: ../../source/usage.rst:77
+msgid "Automatic changelog generation"
+msgstr "自动生成变更日志"
+
+#: ../../source/usage.rst:78
+msgid "Publishing GitHub releases"
+msgstr "发布 GitHub Release"
+
+#: ../../source/usage.rst:79
+msgid "No need to manually bump version numbers"
+msgstr "无需手动更新版本号"
+
+#: ../../source/usage.rst:81
+msgid "To trigger a release, simply merge a commit into the ``main`` branch that follows the `Conventional Commits <https://www.conventionalcommits.org/en/v1.0.0/>`_ format. ``semantic-release`` will handle the rest via CI."
+msgstr "要触发发布，只需将符合 `Conventional Commits <https://www.conventionalcommits.org/en/v1.0.0/>`_ 格式的提交合并到 ``main`` 分支。剩下的工作将由 ``semantic-release`` 通过 CI 自动完成。"
+
+#: ../../source/usage.rst:85
+msgid "For configuration details, see the `semantic-release documentation <https://semantic-release.gitbook.io/semantic-release/>`_."
+msgstr "更多配置详情请参阅 `semantic-release 文档 <https://semantic-release.gitbook.io/semantic-release/>`_。"
+
+#: ../../source/usage.rst:89
+msgid "Publishing to PyPI"
+msgstr "发布到 PyPI"
+
+#: ../../source/usage.rst:91
+msgid "You can configure ``PYPI_U`` and ``PYPI_P`` in the ``.env`` file, then run the ``build_and_upload_to_pypi`` script to upload the package to PyPI. However, this manual method is **not recommended**."
+msgstr "你可以在 ``.env`` 文件中配置 ``PYPI_U`` 和 ``PYPI_P``，然后运行 ``build_and_upload_to_pypi`` 脚本上传软件包到 PyPI。但这种手动方式 **不推荐使用**。"
+
+#: ../../source/usage.rst:95
+msgid "Instead, the recommended approach is to use automated publishing via CI:"
+msgstr "推荐使用 CI 实现自动发布："
+
+#: ../../source/usage.rst:97
+msgid "**Set author information in ``pyproject.toml``**"
+msgstr "**在 ``pyproject.toml`` 中设置作者信息**"
+
+#: ../../source/usage.rst:99
+msgid "You must define the following fields in your ``pyproject.toml`` file:"
+msgstr "你必须在 ``pyproject.toml`` 文件中定义以下字段："
+
+#: ../../source/usage.rst:114
+msgid "You do **not** need to manually update the ``version`` field. It is managed automatically by ``semantic-release``."
+msgstr "你 **无需** 手动更新 ``version`` 字段，它由 ``semantic-release`` 自动管理。"
+
+#: ../../source/usage.rst:119
+msgid "If the ``authors`` field is missing or incomplete (missing name or email), the PyPI publishing step will **fail during CI**."
+msgstr "如果缺少 ``authors`` 字段或其信息不完整（如缺少姓名或邮箱），那么在 CI 流程中发布到 PyPI 将会 **失败**。"
+
+#: ../../source/usage.rst:122
+msgid "**Configure the PyPI token**"
+msgstr "**配置 PyPI 令牌**"
+
+#: ../../source/usage.rst:124
+msgid "In your GitHub repository, navigate to:"
+msgstr "在你的 GitHub 仓库中，导航至："
+
+#: ../../source/usage.rst:130
+msgid "Create a new secret named **PYPI_P** and paste your PyPI API token as the value. You can generate the token from your PyPI account under:"
+msgstr "创建名为 **PYPI_P** 的新机密变量，并粘贴你的 PyPI API 令牌。你可以在你的 PyPI 账户页面生成此令牌："
+
+#: ../../source/usage.rst:137
+msgid "**Trigger the release**"
+msgstr "**触发发布流程**"
+
+#: ../../source/usage.rst:139
+msgid "Once the above steps are complete:"
+msgstr "完成上述步骤后："
+
+#: ../../source/usage.rst:141
+msgid "Make a commit that follows the Conventional Commits format."
+msgstr "提交一条符合 Conventional Commits 格式的信息。"
+
+#: ../../source/usage.rst:142
+msgid "Push or merge it into the ``main`` branch."
+msgstr "推送或合并到 ``main`` 分支。"
+
+#: ../../source/usage.rst:144
+msgid "This will trigger the GitHub Actions workflow, which will:"
+msgstr "这将触发 GitHub Actions 工作流，该流程将："
+
+#: ../../source/usage.rst:146
+msgid "Let ``semantic-release`` determine the next version"
+msgstr "由 ``semantic-release`` 自动确定下一个版本号"
+
+#: ../../source/usage.rst:147
+msgid "Automatically update the changelog and create a Git tag"
+msgstr "自动更新变更日志并创建 Git 标签"
+
+#: ../../source/usage.rst:148
+msgid "Publish the package to PyPI"
+msgstr "将软件包发布到 PyPI"
+
+#: ../../source/usage.rst:151
+msgid "Write the Documentation"
+msgstr "编写文档"
+
+#: ../../source/usage.rst:153
+msgid "This project uses ``Sphinx`` as the documentation generator."
+msgstr "本项目使用 ``Sphinx`` 作为文档生成工具。"
+
+#: ../../source/usage.rst:155
+msgid "You can run the following command to enable live documentation building and preview while editing:"
+msgstr "你可以运行以下命令，在编辑时启用文档的实时构建与预览："
+
+#: ../../source/usage.rst:161
+msgid "This project also supports documentation hosting via `Read the Docs <https://about.readthedocs.com/>`_. You can sign in and configure it to enable automatic documentation hosting and updates."
+msgstr "本项目也支持通过 `Read the Docs <https://about.readthedocs.com/>`_ 托管文档。你可以注册并配置它，以启用文档的自动托管与更新。"

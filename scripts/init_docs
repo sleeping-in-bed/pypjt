@@ -36,6 +36,11 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 """
 conf_content = head + conf_content
+i18n = """
+locale_dirs = ['locale/']
+gettext_compact = False
+"""
+conf_content += i18n
 conf_path.write_text(conf_content, encoding="utf-8")
 
 makefile_path = Path(os.getcwd()) / "docs" / "Makefile"
