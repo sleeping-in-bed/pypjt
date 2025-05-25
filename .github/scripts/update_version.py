@@ -17,6 +17,13 @@ files_to_update = [
         "replacement": lambda m: f"{m.group('block')}{version}{m.group(3)}",
     },
     {
+        "file": "pypjt/create.py",
+        "pattern": re.compile(
+            r'(?P<block>__VERSION__\s*=\s*["\'])(?P<version>[^\s"\']+)(["\'])'
+        ),
+        "replacement": lambda m: f"{m.group('block')}{version}{m.group(3)}",
+    },
+    {
         "file": "uv.lock",
         "pattern": re.compile(
             r'(?P<block>version\s*=\s*["\'])(?P<version>[^\s"\']+)(["\'][^\[]*?source\s*=\s*{[^}]*?editable)',

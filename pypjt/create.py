@@ -4,14 +4,13 @@ import shutil
 from pathlib import Path
 
 import click
-import rtoml
 from dotenv import load_dotenv
 from jinja2 import Environment, FileSystemLoader
 
 load_dotenv()
 PACKAGE_DIR = Path(__file__).parent.absolute()
 RC_DIR = PACKAGE_DIR / "resources"
-PROJECT_DIR = PACKAGE_DIR.parent
+__VERSION__ = "0.1.0"
 
 
 class Renderer:
@@ -37,8 +36,6 @@ class Renderer:
 
 
 def process(**kwargs):
-    pypjt_version = rtoml.load(PROJECT_DIR / "pyproject.toml")["project"]["version"]
-
     project_dir = Path(kwargs["project_dir"])
     shutil.copytree(RC_DIR, project_dir)
 
@@ -55,7 +52,7 @@ def process(**kwargs):
     r.render(
         "pyproject.toml",
         project_dir / "pyproject.toml",
-        {**kwargs, "pypjt_version": pypjt_version},
+        {**kwargs, "pypjt_version": __VERSION__},
     )
     r.render("README.rst", project_dir / "README.rst", kwargs)
     r.render(".releaserc", project_dir / ".releaserc", kwargs)
