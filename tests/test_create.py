@@ -13,7 +13,7 @@ sys.path.append(str(PROJECT_DIR))
 
 
 def test_main(tmp_path):
-    project_name = "pypjt"
+    project_name = "test_project"
 
     os.chdir(tmp_path)
     runner = CliRunner()

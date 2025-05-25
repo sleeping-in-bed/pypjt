@@ -59,6 +59,8 @@ def process(**kwargs):
     )
     r.render("README.rst", project_dir / "README.rst", kwargs)
     r.render(".releaserc", project_dir / ".releaserc", kwargs)
+    r.render("docs/source/conf.py", project_dir / "docs/source/conf.py", kwargs)
+    r.render("docs/source/index.rst", project_dir / "docs/source/index.rst", kwargs)
 
 
 @click.command()

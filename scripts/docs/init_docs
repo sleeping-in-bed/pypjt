@@ -6,9 +6,9 @@ from dotenv import load_dotenv
 import rtoml
 
 
-os.chdir("../../docs")
+os.chdir("../..")
 load_dotenv()
-data = rtoml.load(Path(__file__).parent.parent / "pyproject.toml")
+data = rtoml.load(Path.cwd() / "pyproject.toml")
 
 project_name = data['project']['name']
 os.system(

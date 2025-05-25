@@ -4,7 +4,6 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "{{project_name}}"
 version = "{{version}}"
-dynamic = ["dependencies", "optional-dependencies"]
 authors = [
     { name = "{{author}}", email = "{{email}}" },
 ]
@@ -40,6 +39,7 @@ dev = [
     "sphinx",
     "sphinx-autobuild",
     "sphinx-intl",
+    "furo",
 
     "jinja2",
     "python-dotenv",
