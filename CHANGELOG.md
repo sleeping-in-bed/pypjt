@@ -1,3 +1,9 @@
+## [1.11.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.10.0...v1.11.0) (2025-05-25)
+
+### Features
+
+* add docs dir to project, fix update_version.py ([318b641](https://github.com/sleeping-in-bed/pypjt/commit/318b641d13ba44e4e68d28aa63c63db8237f79d6))
+
 ## [1.10.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.9.0...v1.10.0) (2025-05-24)
 
 ### Features
