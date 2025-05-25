@@ -1,3 +1,9 @@
+## [1.11.1](https://github.com/sleeping-in-bed/pypjt/compare/v1.11.0...v1.11.1) (2025-05-25)
+
+### Bug Fixes
+
+* fix the way to get project version ([ab95ada](https://github.com/sleeping-in-bed/pypjt/commit/ab95adadcf85708a5ca46347b2de3f4b7b237e67))
+
 ## [1.11.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.10.0...v1.11.0) (2025-05-25)
 
 ### Features
