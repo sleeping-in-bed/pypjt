@@ -1,3 +1,9 @@
+## [1.11.2](https://github.com/sleeping-in-bed/pypjt/compare/v1.11.1...v1.11.2) (2025-05-31)
+
+### Bug Fixes
+
+* fix install_dep and .pre-commit-config.yaml ([80e4c23](https://github.com/sleeping-in-bed/pypjt/commit/80e4c2316c5e9c796fa6b5580e57217cb66e67eb))
+
 ## [1.11.1](https://github.com/sleeping-in-bed/pypjt/compare/v1.11.0...v1.11.1) (2025-05-25)
 
 ### Bug Fixes
