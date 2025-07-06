@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pypjt 0...1.1...0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-24 20:01+0000\n"
+"POT-Creation-Date: 2025-07-06 23:34+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -50,14 +50,18 @@ msgid "**REMOTE_REPO**: The remote repository URL for this project."
 msgstr "**REMOTE_REPO**：本项目的远程仓库地址。"
 
 #: ../../source/usage.rst:14
-msgid "**GITHUB_USERNAME**: Your GitHub username, used for authentication."
-msgstr "**GITHUB_USERNAME**：你的 GitHub 用户名，用于身份验证。"
+#, fuzzy
+msgid ""
+"**REPO_USERNAME**: Your remote repository username, used for "
+"authentication."
+msgstr "**REPO_USERNAME**：你的远程仓库用户名，用于身份验证。"
 
 #: ../../source/usage.rst:15
+#, fuzzy
 msgid ""
-"**GITHUB_TOKEN**: Your GitHub personal access token, used to push to "
-"GitHub."
-msgstr "**GITHUB_TOKEN**：你的 GitHub 个人访问令牌，用于推送代码到 GitHub。"
+"**REPO_TOKEN**: Your remote repository personal access token, used for "
+"authentication."
+msgstr "**REPO_TOKEN**：你的远程仓库个人访问令牌，用于身份验证。"
 
 #: ../../source/usage.rst:18
 msgid "Install Dependencies"
@@ -305,7 +309,9 @@ msgid ""
 "This project also supports documentation hosting via `Read the Docs "
 "<https://about.readthedocs.com/>`_. You can sign in and configure it to "
 "enable automatic documentation hosting and updates."
-msgstr "本项目也支持通过 `Read the Docs <https://about.readthedocs.com/>`_ 托管文档。你可以注册并配置它，以启用文档的自动托管与更新。"
+msgstr ""
+"本项目也支持通过 `Read the Docs <https://about.readthedocs.com/>`_ "
+"托管文档。你可以注册并配置它，以启用文档的自动托管与更新。"
 
 #: ../../source/usage.rst:176
 msgid "Codecov"

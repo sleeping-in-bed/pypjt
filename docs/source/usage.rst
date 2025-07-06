@@ -11,8 +11,8 @@ The first step is to configure the environment variables in the ``.env`` file:
 - **GIT_NAME**: Your Git username, used for Git configuration.
 - **GIT_EMAIL**: Your Git email address, used for Git configuration.
 - **REMOTE_REPO**: The remote repository URL for this project.
-- **GITHUB_USERNAME**: Your GitHub username, used for authentication.
-- **GITHUB_TOKEN**: Your GitHub personal access token, used to push to GitHub.
+- **REPO_USERNAME**: Your remote repository username, used for authentication.
+- **REPO_TOKEN**: Your remote repository personal access token, used for authentication.
 
 Install Dependencies
 --------------------
