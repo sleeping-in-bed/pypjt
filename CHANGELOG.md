@@ -1,3 +1,9 @@
+## [1.12.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.11.2...v1.12.0) (2025-07-06)
+
+### Features
+
+* modify the GITHUB_USERNAME and GITHUB_TOKEN to REPO_USERNAME and REPO_TOKEN ([e7b43b0](https://github.com/sleeping-in-bed/pypjt/commit/e7b43b027e5a9c99a15b79584f596af0a10333e7))
+
 ## [1.11.2](https://github.com/sleeping-in-bed/pypjt/compare/v1.11.1...v1.11.2) (2025-05-31)
 
 ### Bug Fixes
