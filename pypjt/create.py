@@ -10,7 +10,7 @@ from jinja2 import Environment, FileSystemLoader
 load_dotenv()
 PACKAGE_DIR = Path(__file__).parent.absolute()
 RC_DIR = PACKAGE_DIR / "resources"
-__VERSION__ = "1.11.2"
+__VERSION__ = "1.12.0"
 
 
 class Renderer:
