@@ -1,3 +1,9 @@
+## [1.12.2](https://github.com/sleeping-in-bed/pypjt/compare/v1.12.1...v1.12.2) (2025-07-13)
+
+### Bug Fixes
+
+* fix the .readthedocs.yaml ([e5e0658](https://github.com/sleeping-in-bed/pypjt/commit/e5e0658e22b34c9ca18ff6d71c81206399059212))
+
 ## [1.12.1](https://github.com/sleeping-in-bed/pypjt/compare/v1.12.0...v1.12.1) (2025-07-13)
 
 ### Bug Fixes
