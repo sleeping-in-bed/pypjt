@@ -37,11 +37,13 @@ dependencies = [
     "click",
     "sphinx-intl",
     "furo",
+    "pyyaml",
 ]
 
 [dependency-groups]
 dev = [
-    "types-setuptools"
+    "types-setuptools",
+    "types-PyYAML",
 ]
 
 [project.scripts]
@@ -91,5 +93,7 @@ select = [
 exclude = [
     "tests/resources",
     "tests/tmp",
-    "containerdata"
+    "containerdata",
+    "build",
+    "dist",
 ]

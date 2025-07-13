@@ -35,6 +35,7 @@ dev = [
     "pre-commit",
 
     "types-setuptools",
+    "types-PyYAML",
 
     "sphinx",
     "sphinx-autobuild",
@@ -46,6 +47,7 @@ dev = [
     "rtoml",
     "beautifulsoup4",
     "click",
+    "pyyaml"
 ]
 
 [project.scripts]
@@ -97,4 +99,6 @@ exclude = [
     "tests/resources",
     "tests/tmp",
     "containerdata",
+    "build",
+    "dist",
 ]
