@@ -1,3 +1,9 @@
+## [1.12.3](https://github.com/sleeping-in-bed/pypjt/compare/v1.12.2...v1.12.3) (2025-07-13)
+
+### Bug Fixes
+
+* fix mypy ([5443197](https://github.com/sleeping-in-bed/pypjt/commit/5443197b416bc76d848153c893af59177d950e23))
+
 ## [1.12.2](https://github.com/sleeping-in-bed/pypjt/compare/v1.12.1...v1.12.2) (2025-07-13)
 
 ### Bug Fixes
