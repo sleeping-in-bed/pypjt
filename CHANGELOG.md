@@ -1,3 +1,9 @@
+## [1.13.1](https://github.com/sleeping-in-bed/pypjt/compare/v1.13.0...v1.13.1) (2025-07-15)
+
+### Bug Fixes
+
+* fix MANIFEST.in ([3e9a170](https://github.com/sleeping-in-bed/pypjt/commit/3e9a1706fa4dee5b763b637160c0703cca532e20))
+
 ## [1.13.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.12.3...v1.13.0) (2025-07-15)
 
 ### Features
