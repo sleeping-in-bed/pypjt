@@ -1,3 +1,9 @@
+## [1.13.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.12.3...v1.13.0) (2025-07-15)
+
+### Features
+
+* update compose.yml and .env.temlpate ([796b565](https://github.com/sleeping-in-bed/pypjt/commit/796b565235982f0ab31035639385bd6c61b2eb26))
+
 ## [1.12.3](https://github.com/sleeping-in-bed/pypjt/compare/v1.12.2...v1.12.3) (2025-07-13)
 
 ### Bug Fixes
