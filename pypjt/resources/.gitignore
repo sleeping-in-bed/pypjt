@@ -5,7 +5,10 @@ __pycache__/
 # node
 node_modules/
 # secret
-.env
+.env*
+!.env.template
+!.env.sample
+!.env.example
 # tmp dir
 /tmp/
 /tests/tmp/
