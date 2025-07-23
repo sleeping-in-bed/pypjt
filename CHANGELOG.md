@@ -1,3 +1,9 @@
+## [1.14.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.13.1...v1.14.0) (2025-07-23)
+
+### Features
+
+* change the .gitignore rules for .env ([e0af23e](https://github.com/sleeping-in-bed/pypjt/commit/e0af23e7d20471eeb92bef8c04b04fc1bcfe6622))
+
 ## [1.13.1](https://github.com/sleeping-in-bed/pypjt/compare/v1.13.0...v1.13.1) (2025-07-15)
 
 ### Bug Fixes
