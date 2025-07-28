@@ -1,3 +1,9 @@
+## [1.16.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.15.0...v1.16.0) (2025-07-28)
+
+### Features
+
+* remove --global in git config ([bdc6347](https://github.com/sleeping-in-bed/pypjt/commit/bdc63479e986e304c54ea3deefe47b07b5afcef6))
+
 ## [1.15.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.14.0...v1.15.0) (2025-07-28)
 
 ### Features
