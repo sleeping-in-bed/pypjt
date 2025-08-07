@@ -28,8 +28,6 @@ docs/build/
 docs/**/*.mo
 # JetBrains
 .idea/
-# vscode
-.vscode/
 # cursor
 .cursor/
 .cursorignore
