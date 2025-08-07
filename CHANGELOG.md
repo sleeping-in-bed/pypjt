@@ -1,3 +1,9 @@
+## [1.17.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.16.0...v1.17.0) (2025-08-07)
+
+### Features
+
+* add ruff lint rules ([c2e58f6](https://github.com/sleeping-in-bed/pypjt/commit/c2e58f64e86d28599b4fa4364879653916eb03f7))
+
 ## [1.16.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.15.0...v1.16.0) (2025-07-28)
 
 ### Features
