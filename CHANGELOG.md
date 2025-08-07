@@ -1,3 +1,9 @@
+## [1.18.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.17.0...v1.18.0) (2025-08-07)
+
+### Features
+
+* add vscode settings ([b9db4ea](https://github.com/sleeping-in-bed/pypjt/commit/b9db4eab0d10227a3ebedb63480da3eb487efc3c))
+
 ## [1.17.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.16.0...v1.17.0) (2025-08-07)
 
 ### Features
