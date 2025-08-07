@@ -19,7 +19,7 @@ files_to_update = [
     {
         "file": "pypjt/create.py",
         "pattern": re.compile(
-            r'(?P<block>__VERSION__\s*=\s*["\'])(?P<version>[^\s"\']+)(["\'])'
+            r'(?P<block>__VERSION__\s*=\s*["\'])(?P<version>[^\s"\']+)(["\'])',
         ),
         "replacement": lambda m: f"{m.group('block')}{version}{m.group(3)}",
     },

@@ -38,6 +38,7 @@ dependencies = [
     "sphinx-intl",
     "furo",
     "pyyaml",
+    "pydantic",
 ]
 
 [dependency-groups]

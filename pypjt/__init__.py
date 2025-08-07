@@ -1,1 +1,5 @@
-from .create import main as main
+"""pypjt."""
+
+from .create import main
+
+__all__ = ["main"]
