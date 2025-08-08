@@ -1,3 +1,9 @@
+## [1.19.1](https://github.com/sleeping-in-bed/pypjt/compare/v1.19.0...v1.19.1) (2025-08-08)
+
+### Bug Fixes
+
+* fix git_init script ([310841d](https://github.com/sleeping-in-bed/pypjt/commit/310841d45549377852d3c708d16ce0b77a84a077))
+
 ## [1.19.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.18.0...v1.19.0) (2025-08-07)
 
 ### Features
