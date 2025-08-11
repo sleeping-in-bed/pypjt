@@ -1,3 +1,10 @@
+## [1.20.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.19.1...v1.20.0) (2025-08-11)
+
+### Features
+
+* remove 'set -e' from git_init, add pytest-asyncio ([1c43a14](https://github.com/sleeping-in-bed/pypjt/commit/1c43a1416d905e8a73cdc2d59dd9cb3b84b968b9))
+* rename .env.template to .env.example ([e93568a](https://github.com/sleeping-in-bed/pypjt/commit/e93568aa4a432232c4abf66fa339984a1d50acf1))
+
 ## [1.19.1](https://github.com/sleeping-in-bed/pypjt/compare/v1.19.0...v1.19.1) (2025-08-08)
 
 ### Bug Fixes
