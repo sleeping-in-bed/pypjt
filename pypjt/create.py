@@ -13,7 +13,7 @@ from pydantic import BaseModel
 load_dotenv()
 PACKAGE_DIR = Path(__file__).parent.absolute()
 RC_DIR = PACKAGE_DIR / "resources"
-__VERSION__ = "1.20.0"
+__VERSION__ = "1.21.0"
 
 
 class Project(BaseModel):
