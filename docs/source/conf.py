@@ -14,8 +14,8 @@ project = "pypjt"
 copyright = "2025, the pypjt developers"
 author = "the pypjt developers"
 
-version = "1.19.1"
-release = "1.19.1"
+version = "1.20.0"
+release = "1.20.0"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
