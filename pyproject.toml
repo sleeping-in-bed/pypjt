@@ -24,6 +24,7 @@ dependencies = [
     "twine",
     "coverage",
     "pytest",
+    "pytest-asyncio",
     "tox",
     "mypy",
     "ruff",
