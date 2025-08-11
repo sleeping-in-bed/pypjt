@@ -1,3 +1,9 @@
+## [1.21.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.20.0...v1.21.0) (2025-08-11)
+
+### Features
+
+* add git.terminalAuthentication false ([689f179](https://github.com/sleeping-in-bed/pypjt/commit/689f179698c12d7fd6d53137f246f7a11194e243))
+
 ## [1.20.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.19.1...v1.20.0) (2025-08-11)
 
 ### Features
