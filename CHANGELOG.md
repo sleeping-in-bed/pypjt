@@ -1,3 +1,9 @@
+## [1.21.1](https://github.com/sleeping-in-bed/pypjt/compare/v1.21.0...v1.21.1) (2025-08-13)
+
+### Bug Fixes
+
+* fix .env name ([fb80ea6](https://github.com/sleeping-in-bed/pypjt/commit/fb80ea6871f28875f5ad86b7d75bd1a14f182b1c))
+
 ## [1.21.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.20.0...v1.21.0) (2025-08-11)
 
 ### Features
