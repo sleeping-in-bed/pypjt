@@ -84,7 +84,7 @@ def process(project: Project) -> None:
     src_dir = project.project_dir / project.project_name
     src_dir.mkdir()
     (src_dir / "__init__.py").touch()
-    shutil.copy2(RC_DIR / ".env.template", project.project_dir / ".env")
+    shutil.copy2(RC_DIR / ".env.example", project.project_dir / ".env")
 
     r = Renderer(searchpath=RC_DIR)
     render_kwargs = project.model_dump()
