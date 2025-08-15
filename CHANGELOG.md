@@ -1,3 +1,9 @@
+## [1.22.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.21.1...v1.22.0) (2025-08-15)
+
+### Features
+
+* update install_dep ([8e5c1fb](https://github.com/sleeping-in-bed/pypjt/commit/8e5c1fbfdffc7ef374b0335a2eb3043dc2e27ab6))
+
 ## [1.21.1](https://github.com/sleeping-in-bed/pypjt/compare/v1.21.0...v1.21.1) (2025-08-13)
 
 ### Bug Fixes
