@@ -47,6 +47,8 @@ dependencies = [
 dev = [
     "types-setuptools",
     "types-PyYAML",
+    "types-beautifulsoup4",
+    "types-click",
 ]
 
 [project.scripts]

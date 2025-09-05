@@ -4,7 +4,8 @@ import os
 import sys
 from pathlib import Path
 
-from click.testing import CliRunner
+import typer
+from typer.testing import CliRunner
 from dotenv import load_dotenv
 
 from pypjt.create import main
@@ -24,7 +25,9 @@ def test_main(tmp_path: Path) -> None:
     project_name = "test_project"
 
     os.chdir(tmp_path)
+    app = typer.Typer()
+    app.command()(main)
     runner = CliRunner()
-    result = runner.invoke(main, input=f"{project_name}\n1.0.0a1\nme\na@a.com\nTest\n")
+    result = runner.invoke(app, input=f"{project_name}\n1.0.0a1\nme\na@a.com\nTest\n")
     print(result.output)
     assert result.exit_code == 0

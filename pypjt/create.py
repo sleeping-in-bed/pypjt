@@ -147,7 +147,7 @@ def main(
         )
         typer.echo(msg, err=True)
         raise typer.Exit(code=1)
-    version = typer.prompt("Version", default="0.0.1")
+    project_version = typer.prompt("Version", default="0.0.1")
     author = typer.prompt("Author", default="")
     email = typer.prompt("Email", default="")
     description = typer.prompt("Description", default="")
@@ -155,7 +155,7 @@ def main(
     project = Project(
         project_dir=project_dir,
         project_name=project_name,
-        version=version,
+        version=project_version,
         author=author,
         email=email,
         description=description,

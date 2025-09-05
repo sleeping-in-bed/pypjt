@@ -38,9 +38,10 @@ def main(htmlcov_dir: str) -> None:
                 "html.parser",
             )
             coverage_span = soup.find("span", class_="pc_cov")
+            coverage_text = coverage_span.text if coverage_span else "Unknown"
             content = (
                 f'<li><a href="{child.name}/index.html">{child.name} Coverage Report</a><br/>'
-                f"<p>Coverage report: {coverage_span.text}</p></li>"
+                f"<p>Coverage report: {coverage_text}</p></li>"
             )
             links.append(content)
 
