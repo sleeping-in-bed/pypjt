@@ -1,3 +1,9 @@
+## [1.25.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.24.0...v1.25.0) (2025-09-05)
+
+### Features
+
+* resolve mypy problems ([ddb1ba6](https://github.com/sleeping-in-bed/pypjt/commit/ddb1ba65a138a4e6098e667067e41ef80494f995))
+
 ## [1.24.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.23.0...v1.24.0) (2025-09-05)
 
 ### Features
