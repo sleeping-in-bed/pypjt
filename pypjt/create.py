@@ -4,8 +4,9 @@
 import os
 import shutil
 from pathlib import Path
+from typing import Annotated
 
-import click
+import typer
 from dotenv import load_dotenv
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from pydantic import BaseModel
@@ -14,6 +15,21 @@ load_dotenv()
 PACKAGE_DIR = Path(__file__).parent.absolute()
 RC_DIR = PACKAGE_DIR / "resources"
 __VERSION__ = "1.22.0"
+
+
+def version_callback(value: bool) -> None:
+    """Show the version and exit.
+
+    Args:
+        value: Whether to show version or not.
+
+    Raises:
+        typer.Exit: When version is requested.
+
+    """
+    if value:
+        typer.echo(__VERSION__)
+        raise typer.Exit()
 
 
 class Project(BaseModel):
@@ -109,24 +125,32 @@ def process(project: Project) -> None:
     )
 
 
-@click.command()
-def main() -> None:
+def main(
+    version: Annotated[
+        bool,
+        typer.Option(
+            "--version",
+            callback=version_callback,
+            is_eager=True,
+            help="Show the version and exit.",
+        ),
+    ] = False,
+) -> None:
     """Run the command-line interface for creating a new project."""
-    project_name = click.prompt("Project name", type=str)
-    click.echo(f"Project will create at '{Path.cwd() / project_name}'")
+    project_name = typer.prompt("Project name")
+    typer.echo(f"Project will create at '{Path.cwd() / project_name}'")
     project_dir = Path.cwd() / project_name
     if project_dir.exists():
         msg = (
             f"Project dir '{project_dir}' already exists, "
             f"please choose another name or delete it first."
         )
-        raise click.ClickException(
-            msg,
-        )
-    version = click.prompt("Version", type=str, default="0.0.1")
-    author = click.prompt("Author", type=str, default="")
-    email = click.prompt("Email", type=str, default="")
-    description = click.prompt("Description", type=str, default="")
+        typer.echo(msg, err=True)
+        raise typer.Exit(code=1)
+    version = typer.prompt("Version", default="0.0.1")
+    author = typer.prompt("Author", default="")
+    email = typer.prompt("Email", default="")
+    description = typer.prompt("Description", default="")
 
     project = Project(
         project_dir=project_dir,
@@ -140,4 +164,4 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    typer.run(main)

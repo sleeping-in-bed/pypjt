@@ -31,5 +31,7 @@ docs/**/*.mo
 # cursor
 .cursor/
 .cursorignore
+# claude
+.claude/
 # macOS
 .DS_Store
