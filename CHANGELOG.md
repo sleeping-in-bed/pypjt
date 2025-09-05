@@ -1,3 +1,9 @@
+## [1.24.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.23.0...v1.24.0) (2025-09-05)
+
+### Features
+
+* resolve lint problems ([328b6aa](https://github.com/sleeping-in-bed/pypjt/commit/328b6aafed7ef03e382e23fddec5e96134aa2c70))
+
 ## [1.23.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.22.0...v1.23.0) (2025-09-05)
 
 ### Features
