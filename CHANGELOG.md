@@ -1,3 +1,9 @@
+## [1.23.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.22.0...v1.23.0) (2025-09-05)
+
+### Features
+
+* replace click to typer, add .claude to .gitignore ([20ee71b](https://github.com/sleeping-in-bed/pypjt/commit/20ee71ba97b7fcb3a531f7dee1c5479160ed4d15))
+
 ## [1.22.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.21.1...v1.22.0) (2025-08-15)
 
 ### Features
