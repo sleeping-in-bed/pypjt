@@ -148,6 +148,9 @@ ignore = [
     "W293",  # blank-line-with-whitespace
     "S101",  # assert
     "CPY001",  # missing-copyright-notice
+    "INP001",  # implicit-namespace-package
+    "T201",  # print
+    "RSE102",  # unnecessary-paren-on-raise-exception
 ]
 
 [tool.mypy]

@@ -1,3 +1,5 @@
+"""Tests for project creation command."""
+
 import os
 import sys
 from pathlib import Path
@@ -12,7 +14,13 @@ PROJECT_DIR = Path(__file__).parent.parent.parent
 sys.path.append(str(PROJECT_DIR))
 
 
-def test_main(tmp_path):
+def test_main(tmp_path: Path) -> None:
+    """Create a project via CLI and ensure success.
+
+    Args:
+        tmp_path: Temporary directory for running the command.
+
+    """
     project_name = "test_project"
 
     os.chdir(tmp_path)

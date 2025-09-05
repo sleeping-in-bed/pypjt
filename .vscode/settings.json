@@ -26,5 +26,15 @@
       "DTZ",
       "TRY"
     ],
-    "ruff.lint.ignore": []
+    "ruff.lint.ignore": [
+      "E501",
+      "PLC2401",
+      "PLC2403",
+      "W293",
+      "S101",
+      "CPY001",
+      "INP001",
+      "T201",
+      "RSE102"
+    ]
   }

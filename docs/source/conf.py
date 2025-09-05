@@ -1,3 +1,5 @@
+"""Configure Sphinx documentation."""
+
 import sys
 from pathlib import Path
 
@@ -11,7 +13,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "pypjt"
-copyright = "2025, the pypjt developers"
+copyright = "2025, the pypjt developers"  # noqa: A001
 author = "the pypjt developers"
 
 version = "1.23.0"
@@ -29,7 +31,7 @@ extensions = [
 
 
 templates_path = ["_templates"]
-exclude_patterns = []  # type: ignore
+exclude_patterns = []
 
 language = "en"
 

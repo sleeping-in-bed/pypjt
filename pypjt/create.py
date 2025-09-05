@@ -17,7 +17,7 @@ RC_DIR = PACKAGE_DIR / "resources"
 __VERSION__ = "1.23.0"
 
 
-def version_callback(value: bool) -> None:
+def version_callback(*, value: bool) -> None:
     """Show the version and exit.
 
     Args:
@@ -126,7 +126,7 @@ def process(project: Project) -> None:
 
 
 def main(
-    version: Annotated[
+    version: Annotated[  # noqa: FBT002
         bool,
         typer.Option(
             "--version",
