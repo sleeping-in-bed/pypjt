@@ -1,3 +1,15 @@
+## [1.26.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.25.0...v1.26.0) (2025-09-07)
+
+### Features
+
+* add ansible ([f5d0c7f](https://github.com/sleeping-in-bed/pypjt/commit/f5d0c7fd2f6c87b0e9438ca699c4bd1a8390fc56))
+* add ruff to pre-commit ([3414b45](https://github.com/sleeping-in-bed/pypjt/commit/3414b45462ec46bc5de3ba82cafb5ef4daf7695a))
+* modify Dockerfile and compose.yml and change others ([38a4d4e](https://github.com/sleeping-in-bed/pypjt/commit/38a4d4ec9dd8e36064ecd89fba1469ea8bf01645))
+
+### Bug Fixes
+
+* fix pre-commit ([0b6b9d3](https://github.com/sleeping-in-bed/pypjt/commit/0b6b9d34bec1f21ea0914ba1a0ed5adb21e823ee))
+
 ## [1.25.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.24.0...v1.25.0) (2025-09-05)
 
 ### Features
