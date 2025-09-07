@@ -5,8 +5,8 @@ import sys
 from pathlib import Path
 
 import typer
-from typer.testing import CliRunner
 from dotenv import load_dotenv
+from typer.testing import CliRunner
 
 from pypjt.create import main
 

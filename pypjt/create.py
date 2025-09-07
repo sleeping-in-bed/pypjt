@@ -105,6 +105,7 @@ def process(project: Project) -> None:
     r = Renderer(searchpath=RC_DIR)
     render_kwargs = project.model_dump()
     r.render("compose.yml", project.project_dir / "compose.yml", render_kwargs)
+    r.render("Dockerfile", project.project_dir / "Dockerfile", render_kwargs)
     r.render("MANIFEST.in", project.project_dir / "MANIFEST.in", render_kwargs)
     r.render(
         "pyproject.toml",
@@ -126,7 +127,7 @@ def process(project: Project) -> None:
 
 
 def main(
-    version: Annotated[  # noqa: FBT002
+    version: Annotated[  # noqa: FBT002 ARG001
         bool,
         typer.Option(
             "--version",
