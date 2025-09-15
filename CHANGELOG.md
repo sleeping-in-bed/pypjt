@@ -1,3 +1,9 @@
+## [1.26.1](https://github.com/sleeping-in-bed/pypjt/compare/v1.26.0...v1.26.1) (2025-09-15)
+
+### Bug Fixes
+
+* fix docker prune conflict ([325c1bd](https://github.com/sleeping-in-bed/pypjt/commit/325c1bd827e81dc863df601ab671318dd3a5e447))
+
 ## [1.26.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.25.0...v1.26.0) (2025-09-07)
 
 ### Features
