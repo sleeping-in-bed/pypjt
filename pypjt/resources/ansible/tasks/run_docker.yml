@@ -20,3 +20,4 @@
     images_filters:
       dangling: true
     builder_cache: true
+  throttle: 1
