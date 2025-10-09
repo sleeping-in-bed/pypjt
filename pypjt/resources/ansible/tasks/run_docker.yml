@@ -15,9 +15,9 @@
     DOCKER_BUILDKIT: "1"
 
 - name: Prune unused Docker images and build cache
-  community.docker.docker_prune:
-    images: true
-    images_filters:
-      dangling: true
-    builder_cache: true
-  throttle: 1
+  ansible.builtin.command:
+    cmd: "python3 {{ deploy_dir }}/ansible/tasks/docker_prune_once.py"
+  environment:
+    DOCKER_PRUNE_LOCK_FILE: "/tmp/docker_prune.lock"
+  register: prune_cmd
+  changed_when: prune_cmd.stdout is search('\\[docker-prune-once\\] Completed successfully')
