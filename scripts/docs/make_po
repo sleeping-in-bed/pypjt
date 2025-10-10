@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-cd ../../docs
+cd ./docs
 make gettext
 # For example, use "-l zh_CN -l es" to add languages
 # If you are updating existing po files, run directly

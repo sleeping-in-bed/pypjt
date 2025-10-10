@@ -2,23 +2,21 @@
 import os
 from pathlib import Path
 
-from dotenv import load_dotenv
 import rtoml
+from dotenv import load_dotenv
 
-
-os.chdir("../..")
 load_dotenv()
 data = rtoml.load(Path.cwd() / "pyproject.toml")
 
-project_name = data['project']['name']
+project_name = data["project"]["name"]
 os.system(
     f"sphinx-quickstart --sep "
     f"-p {project_name} "
     f'-a "the {project_name} developers" '
-    f'-v {".".join(data["project"]["version"])} '
-    f'-r {data["project"]["version"]} '
+    f"-v {'.'.join(data['project']['version'])} "
+    f"-r {data['project']['version']} "
     f"-l en "
-    f"docs"
+    f"docs",
 )
 
 conf_path = Path(os.getcwd()) / "docs" / "source" / "conf.py"

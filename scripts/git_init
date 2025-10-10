@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-cd ..
 source .env
 git init
 git config user.email $GIT_EMAIL

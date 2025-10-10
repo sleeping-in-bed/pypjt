@@ -5,7 +5,6 @@ import subprocess
 import click
 from dotenv import load_dotenv
 
-os.chdir("..")
 load_dotenv()
 
 
@@ -14,7 +13,8 @@ def get_current_branch():
     try:
         branch = (
             subprocess.check_output(
-                ["git", "rev-parse", "--abbrev-ref", "HEAD"], stderr=subprocess.DEVNULL
+                ["git", "rev-parse", "--abbrev-ref", "HEAD"],
+                stderr=subprocess.DEVNULL,
             )
             .decode()
             .strip()

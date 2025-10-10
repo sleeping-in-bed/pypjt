@@ -2,17 +2,17 @@
 import os
 from pathlib import Path
 
-from dotenv import load_dotenv
 import rtoml
+from dotenv import load_dotenv
 
-
-os.chdir("..")
 load_dotenv()
 data = rtoml.load(Path(__file__).parent.parent / "pyproject.toml")
 
-project_name = data['project']['name']
-os.system(f'rm -rf ./dist')
+project_name = data["project"]["name"]
+os.system("rm -rf ./dist")
 if project_name:
-    os.system(f'sudo rm -rf ./{project_name}.egg-info')
-os.system(f'python -m build')
-os.system(f'python -m twine upload dist/* -u {os.environ["PYPI_U"]} -p {os.environ["PYPI_P"]}')
+    os.system(f"sudo rm -rf ./{project_name}.egg-info")
+os.system("python -m build")
+os.system(
+    f"python -m twine upload dist/* -u {os.environ['PYPI_U']} -p {os.environ['PYPI_P']}",
+)

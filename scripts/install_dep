@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 set -e
-cd ..
 # install uv if needed
 install_uv_if_needed() {
 # add PATH before uv
