@@ -62,8 +62,11 @@ created-by = "{{pypjt_version}}"
 default-groups = "all"
 
 [tool.setuptools]
-packages = ["{{project_name}}"]
 include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+exclude = ["tests*"]
 
 [tool.pytest.ini_options]
 minversion = "6.0"
@@ -76,8 +79,7 @@ testpaths = [
 extend-exclude = [
     "{{project_name}}/resources",
     "tests/resources",
-    "tests/tmp",
-    "containerdata",
+    "tests/tmp"
 ]
 
 [tool.ruff.lint]
@@ -160,7 +162,6 @@ exclude = [
     "{{project_name}}/resources",
     "tests/resources",
     "tests/tmp",
-    "containerdata",
     "build",
     "dist",
 ]

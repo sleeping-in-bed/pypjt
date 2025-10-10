@@ -97,9 +97,13 @@ def process(project: Project) -> None:
 
     (project.project_dir / "CHANGELOG.md").touch()
 
-    src_dir = project.project_dir / project.project_name
+    src_dir = project.project_dir / "src"
     src_dir.mkdir()
-    (src_dir / "__init__.py").touch()
+
+    pkg_dir = src_dir / project.project_name
+    pkg_dir.mkdir()
+    (pkg_dir / "__init__.py").touch()
+    (pkg_dir / "main.py").touch()
     shutil.copy2(RC_DIR / ".env.example", project.project_dir / ".env")
 
     r = Renderer(searchpath=RC_DIR)
@@ -149,9 +153,9 @@ def main(
         typer.echo(msg, err=True)
         raise typer.Exit(code=1)
     project_version = typer.prompt("Version", default="0.0.1")
-    author = typer.prompt("Author", default="")
-    email = typer.prompt("Email", default="")
-    description = typer.prompt("Description", default="")
+    author = typer.prompt("Author", default="a")
+    email = typer.prompt("Email", default="a@b.c")
+    description = typer.prompt("Description", default="A python project.")
 
     project = Project(
         project_dir=project_dir,
