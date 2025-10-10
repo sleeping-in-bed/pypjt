@@ -1,3 +1,10 @@
+## [1.27.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.26.1...v1.27.0) (2025-10-10)
+
+### Features
+
+* change scripts exec dir to project root ([933cef5](https://github.com/sleeping-in-bed/pypjt/commit/933cef50bd7d1de240289340077091432b194536))
+* change to src struct ([6833c7b](https://github.com/sleeping-in-bed/pypjt/commit/6833c7bcccd7cb9aa39186ff574820b6c8d4aa0f))
+
 ## [1.26.1](https://github.com/sleeping-in-bed/pypjt/compare/v1.26.0...v1.26.1) (2025-09-15)
 
 ### Bug Fixes
