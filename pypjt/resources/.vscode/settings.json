@@ -27,6 +27,9 @@
       "TRY"
     ],
     "ruff.lint.ignore": [
+      "RUF001",
+      "RUF002",
+      "RUF003",
       "E501",
       "PLC2401",
       "PLC2403",
