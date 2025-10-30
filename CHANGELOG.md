@@ -1,3 +1,9 @@
+## [1.28.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.27.0...v1.28.0) (2025-10-30)
+
+### Features
+
+* add dockerignore and update ansible ([589d1d2](https://github.com/sleeping-in-bed/pypjt/commit/589d1d2b11fec44d2f41ca1a833b7c701d4b67f9))
+
 ## [1.27.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.26.1...v1.27.0) (2025-10-10)
 
 ### Features
