@@ -4,7 +4,7 @@
 import os
 import shutil
 from pathlib import Path
-from typing import Annotated
+from typing import Annotated, Literal
 
 import typer
 from dotenv import load_dotenv
@@ -12,9 +12,12 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 from pydantic import BaseModel
 
 load_dotenv()
-PACKAGE_DIR = Path(__file__).parent.absolute()
-RC_DIR = PACKAGE_DIR / "resources"
-__VERSION__ = "1.28.0"
+
+PROJECT_DIR = Path(__file__).parent.parent.parent.absolute()
+RC_DIR = PROJECT_DIR / "templates"
+COMMON_DIR = RC_DIR / "common"
+
+__VERSION__ = "1.27.0"
 
 
 def version_callback(*, value: bool) -> None:
@@ -35,6 +38,8 @@ def version_callback(*, value: bool) -> None:
 class Project(BaseModel):
     """Pydantic model for project data."""
 
+    project_type: Literal["py", "js", "go"] = "py"
+    sub_type: Literal["vue", "uniapp"] | None = None
     project_dir: Path
     project_name: str
     version: str = "0.0.1"
@@ -86,6 +91,48 @@ class Renderer:
         return output
 
 
+def process_py(project: Project, src_dir: Path, render_kwargs: dict) -> None:
+    PY_DIR = RC_DIR / "py"
+    shutil.copytree(PY_DIR, project.project_dir, dirs_exist_ok=True)
+
+    pkg_dir = src_dir / project.project_name
+    pkg_dir.mkdir()
+    (pkg_dir / "__init__.py").touch()
+    (pkg_dir / "main.py").touch()
+
+    r = Renderer(searchpath=PY_DIR)
+    r.render("MANIFEST.in", project.project_dir / "MANIFEST.in", render_kwargs)
+    r.render(
+        "pyproject.toml",
+        project.project_dir / "pyproject.toml",
+        {**render_kwargs, "pypjt_version": __VERSION__},
+    )
+
+
+def process_js(project: Project, src_dir: Path, render_kwargs: dict) -> None:
+    JS_DIR = RC_DIR / "js"
+    shutil.copytree(JS_DIR, project.project_dir, dirs_exist_ok=True)
+
+    (project.project_dir / ".env.development").touch()
+    (project.project_dir / ".prettierignore").touch()
+
+    if project.sub_type == "uniapp":
+        UNIAPP_DIR = RC_DIR / "js_uniapp"
+        shutil.copytree(UNIAPP_DIR, project.project_dir, dirs_exist_ok=True)
+
+        r = Renderer(searchpath=UNIAPP_DIR)
+        r.render("package.json", project.project_dir / "package.json", render_kwargs)
+        r.render("bun.lock", project.project_dir / "bun.lock", render_kwargs)
+
+    elif project.sub_type == "vue":
+        VUE_DIR = RC_DIR / "js_vue"
+        shutil.copytree(VUE_DIR, project.project_dir, dirs_exist_ok=True)
+
+        r = Renderer(searchpath=VUE_DIR)
+        r.render("package.json", project.project_dir / "package.json", render_kwargs)
+        r.render("bun.lock", project.project_dir / "bun.lock", render_kwargs)
+
+
 def process(project: Project) -> None:
     """Process the project creation.
 
@@ -93,29 +140,18 @@ def process(project: Project) -> None:
         project: A Project object containing project details.
 
     """
-    shutil.copytree(RC_DIR, project.project_dir)
-
+    shutil.copytree(COMMON_DIR, project.project_dir, dirs_exist_ok=True)
     (project.project_dir / "CHANGELOG.md").touch()
-
     src_dir = project.project_dir / "src"
     src_dir.mkdir()
 
-    pkg_dir = src_dir / project.project_name
-    pkg_dir.mkdir()
-    (pkg_dir / "__init__.py").touch()
-    (pkg_dir / "main.py").touch()
-    shutil.copy2(RC_DIR / ".env.example", project.project_dir / ".env")
+    shutil.copy2(COMMON_DIR / ".env.example", project.project_dir / ".env")
 
-    r = Renderer(searchpath=RC_DIR)
     render_kwargs = project.model_dump()
+
+    r = Renderer(searchpath=COMMON_DIR)
     r.render("compose.yml", project.project_dir / "compose.yml", render_kwargs)
     r.render("Dockerfile", project.project_dir / "Dockerfile", render_kwargs)
-    r.render("MANIFEST.in", project.project_dir / "MANIFEST.in", render_kwargs)
-    r.render(
-        "pyproject.toml",
-        project.project_dir / "pyproject.toml",
-        {**render_kwargs, "pypjt_version": __VERSION__},
-    )
     r.render("README.rst", project.project_dir / "README.rst", render_kwargs)
     r.render(".releaserc", project.project_dir / ".releaserc", render_kwargs)
     r.render(
@@ -128,6 +164,11 @@ def process(project: Project) -> None:
         project.project_dir / "docs/source/index.rst",
         render_kwargs,
     )
+
+    if project.project_type == "py":
+        process_py(project, src_dir, render_kwargs)
+    elif project.project_type == "js":
+        process_js(project, src_dir, render_kwargs)
 
 
 def main(
@@ -142,8 +183,18 @@ def main(
     ] = False,
 ) -> None:
     """Run the command-line interface for creating a new project."""
+    project_type = typer.prompt("Project type [py/js/go]", default="py")
+    if project_type not in {"py", "js", "go"}:
+        typer.echo("Invalid project type. Choose from 'py', 'js', or 'go'.", err=True)
+        raise typer.Exit(code=1)
+    if project_type == "js":
+        sub_type = typer.prompt("Sub type [vue/uniapp]", default="vue")
+        if sub_type not in {"vue", "uniapp"}:
+            typer.echo("Invalid sub type. Choose from 'vue' or 'uniapp'.", err=True)
+            raise typer.Exit(code=1)
+    else:
+        sub_type = None
     project_name = typer.prompt("Project name")
-    typer.echo(f"Project will create at '{Path.cwd() / project_name}'")
     project_dir = Path.cwd() / project_name
     if project_dir.exists():
         msg = (
@@ -152,6 +203,7 @@ def main(
         )
         typer.echo(msg, err=True)
         raise typer.Exit(code=1)
+    typer.echo(f"Project will create at '{project_dir}'")
     project_version = typer.prompt("Version", default="0.0.1")
     author = typer.prompt("Author", default="a")
     email = typer.prompt("Email", default="a@b.c")
@@ -160,6 +212,8 @@ def main(
     project = Project(
         project_dir=project_dir,
         project_name=project_name,
+        project_type=project_type,
+        sub_type=sub_type,
         version=project_version,
         author=author,
         email=email,

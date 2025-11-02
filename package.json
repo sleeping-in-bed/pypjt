@@ -1,12 +1,34 @@
 {
+  "name": "pypjt",
+  "version": "1.27.0",
+  "description": "A project to create python project template.",
+  "type": "module",
+  "author": "sleeping-in-bed <nyanyanyaworld@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/sleeping-in-bed/pypjt",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sleeping-in-bed/pypjt.git"
+  },
+  "keywords": [
+    "project",
+    "template",
+    "create",
+    "initialize"
+  ],
+  "bin": {
+    "pypjt": "./src/pypjt/pypjt.ts"
+  },
   "scripts": {
     "commit": "commit",
-    "prepare": "husky"
+    "prepare": "husky",
+    "pypjt": "bun ./src/pypjt/pypjt.ts"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
     "@commitlint/prompt-cli": "^19.8.0",
+    "@types/node": "^22.18.13",
     "husky": "^9.1.7"
   }
 }

@@ -44,4 +44,4 @@ RUN --mount=type=cache,target=/root/.cache/uv \
     --mount=type=ssh \
     uv sync --frozen
 
-CMD ["uv", "run", "./pypjt/main.py"]
+CMD ["uv", "run", "./src/pypjt/main.py"]
