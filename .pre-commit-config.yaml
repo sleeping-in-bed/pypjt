@@ -3,10 +3,10 @@ repos:
   rev: v5.0.0
   hooks:
     - id: check-yaml
-      exclude: templates/common/compose.yml
+      exclude: src/pypjt/templates/common/compose.yml
     - id: check-toml
     - id: check-json
-      exclude: ^templates/js_uniapp/src/(manifest\.json|pages\.json)$
+      exclude: ^src/pypjt/templates/js_uniapp/src/(manifest\.json|pages\.json)$
     - id: end-of-file-fixer
     - id: trailing-whitespace
     - id: check-added-large-files

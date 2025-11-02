@@ -13,8 +13,8 @@ from pydantic import BaseModel
 
 load_dotenv()
 
-PROJECT_DIR = Path(__file__).parent.parent.parent.absolute()
-RC_DIR = PROJECT_DIR / "templates"
+PACKAGE_DIR = Path(__file__).parent.absolute()
+RC_DIR = PACKAGE_DIR / "templates"
 COMMON_DIR = RC_DIR / "common"
 
 __VERSION__ = "1.27.0"
