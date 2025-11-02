@@ -1,3 +1,13 @@
+## [2.0.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.28.0...v2.0.0) (2025-11-02)
+
+### ⚠ BREAKING CHANGES
+
+* a milestone change
+
+### Features
+
+* add support for multiple programming languages ([131d09f](https://github.com/sleeping-in-bed/pypjt/commit/131d09f340b49be1714553de6c8d99ffdc044f29))
+
 ## [1.28.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.27.0...v1.28.0) (2025-10-30)
 
 ### Features
