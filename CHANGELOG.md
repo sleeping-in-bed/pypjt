@@ -1,3 +1,9 @@
+## [2.0.1](https://github.com/sleeping-in-bed/pypjt/compare/v2.0.0...v2.0.1) (2025-11-02)
+
+### Bug Fixes
+
+* dir structure ([9a623ff](https://github.com/sleeping-in-bed/pypjt/commit/9a623ff272d09dcede78aad5cceafc8aef603be1))
+
 ## [2.0.0](https://github.com/sleeping-in-bed/pypjt/compare/v1.28.0...v2.0.0) (2025-11-02)
 
 ### ⚠ BREAKING CHANGES
