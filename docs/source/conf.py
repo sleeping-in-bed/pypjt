@@ -16,8 +16,8 @@ project = "pypjt"
 copyright = "2025, the pypjt developers"  # noqa: A001
 author = "the pypjt developers"
 
-version = "1.28.0"
-release = "1.28.0"
+version = "2.0.0"
+release = "2.0.0"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
