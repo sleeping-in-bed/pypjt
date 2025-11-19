@@ -59,6 +59,11 @@
     "vue-i18n": "^9.1.9"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "@commitlint/prompt-cli": "^19.8.0",
+    "@types/node": "^22.18.13",
+    "husky": "^9.1.7",
     "@dcloudio/types": "^3.4.8",
     "@dcloudio/uni-automator": "3.0.0-4030620241128001",
     "@dcloudio/uni-cli-shared": "3.0.0-4030620241128001",

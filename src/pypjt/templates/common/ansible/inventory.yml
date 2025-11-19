@@ -2,9 +2,12 @@ all:
   vars:
     project_src: "{{ playbook_dir | dirname }}"
     deploy_dir: "/opt/deploy/{{ (playbook_dir | dirname) | basename }}"
-    env_files:
-       - ".env"
-    extra_files:
+    env_files:  # merge env files into one file and copy to remote server
+      - srcs: [".env"]
+        dst: ".env"
+      # - srcs: [".env.local.common", ".env.local.host1"]
+      #   dst: ".env.local"
+    extra_files:  # add files to .dockerignore to ignore them in the deployment
       # - src: "secrets/private_key.pem"  # relative to project_src
       #   dst: "/absolute/path/secrets/private_key.pem"  # absolute path on remote
       # - src: "/absolute/path/certs"  # absolute local path
@@ -15,7 +18,7 @@ all:
         host1:
           ansible_host: your-server
           ansible_user: your-user
-        # host2:
+        # host2:  # you can change the deployment variables for each host
         #   ansible_host: your-server
         #   ansible_user: your-user
         #   deploy_dir: "/opt/deploy/{{ (playbook_dir | dirname) | basename }}2"

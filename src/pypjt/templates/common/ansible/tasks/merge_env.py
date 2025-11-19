@@ -9,14 +9,31 @@ def merge_env_files(merged_env_file: str, env_file_paths: list[str]) -> None:
     merged_file = Path(merged_env_file)
     merged_file.parent.mkdir(parents=True, exist_ok=True)
 
+    missing_files: list[str] = []
+    wrote_any: bool = False
+
     with merged_file.open("w", encoding="utf-8") as output:
         for env_path in env_file_paths:
             env_file = Path(env_path)
-            if env_file.exists():
-                content = env_file.read_text(encoding="utf-8")
-                output.write(content)
-                if not content.endswith("\n"):
-                    output.write("\n")
+            if not env_file.exists():
+                missing_files.append(env_path)
+                continue
+
+            content = env_file.read_text(encoding="utf-8")
+            if content:
+                wrote_any = True
+            output.write(content)
+            if not content.endswith("\n"):
+                output.write("\n")
+
+    if missing_files:
+        missing_str = ", ".join(missing_files)
+        msg = f"Missing env files: {missing_str}"
+        raise FileNotFoundError(msg)
+
+    if not wrote_any:
+        msg = f"No content written from env files: {env_file_paths}"
+        raise ValueError(msg)
 
     # Ensure readable permissions for the merged file
     merged_file.chmod(0o644)
