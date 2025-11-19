@@ -1,3 +1,10 @@
+## [2.1.0](https://github.com/sleeping-in-bed/pypjt/compare/v2.0.1...v2.1.0) (2025-11-19)
+
+### Features
+
+* change ansible and js lib ([6437690](https://github.com/sleeping-in-bed/pypjt/commit/6437690ac42022e74a3d0c6b811e0521d74ba9ff))
+* update uniapp template ([6f339a8](https://github.com/sleeping-in-bed/pypjt/commit/6f339a8e4185a03999bdb8f0241e8b0eb50a1993))
+
 ## [2.0.1](https://github.com/sleeping-in-bed/pypjt/compare/v2.0.0...v2.0.1) (2025-11-02)
 
 ### Bug Fixes
